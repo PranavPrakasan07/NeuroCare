@@ -1,5 +1,6 @@
 package com.example.neurocare;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -64,11 +65,21 @@ public class ChatFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_chat, container, false);
 
-        TextView header = view.findViewById(R.id.top_header);
+        TextView user_welcome = view.findViewById(R.id.top_header);
+        TextView header = view.findViewById(R.id.chatbot_header);
 
-        header.setText("Hi " + Objects.requireNonNull(LoginActivity.auth.getCurrentUser()).getDisplayName() + "!");
+        try {
+            user_welcome.setText("Hi " + Objects.requireNonNull(LoginActivity.auth.getCurrentUser()).getDisplayName() + "!");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
-
+        header.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), ChatBotActivity.class));
+            }
+        });
 
         return view;
     }

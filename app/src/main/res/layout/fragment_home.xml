@@ -1,15 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/background_color"
     tools:context=".HomeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
 
-</FrameLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        android:background="@drawable/blue_bg">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationView"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            app:lottie_autoPlay="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            app:lottie_fileName="chatbot-anim.json"
+            app:lottie_loop="true"
+            app:lottie_url="https://assets8.lottiefiles.com/packages/lf20_g7zx4ni5.json" />
+
+
+        <TextView
+            android:id="@+id/top_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hi User!"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24sp"
+            android:textColor="@color/background_color"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/top_header1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Let's take a ride!"
+            android:layout_marginBottom="16dp"
+            android:layout_marginStart="24dp"
+            android:layout_below="@id/top_header"
+            android:textColor="@color/background_color"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
