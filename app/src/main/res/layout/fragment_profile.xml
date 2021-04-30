@@ -12,7 +12,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:background="@drawable/blue_bg"/>
+        android:background="@drawable/shadow"/>
 
     <ImageView
         android:id="@+id/profile_photo"

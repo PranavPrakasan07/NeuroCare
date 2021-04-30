@@ -12,7 +12,7 @@
         android:id="@+id/top_layout"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:background="@drawable/blue_bg"
+        android:background="@drawable/shadow"
         android:orientation="vertical">
 
         <com.airbnb.lottie.LottieAnimationView
@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="32sp"
+            android:layout_marginTop="16dp"
             android:layout_toStartOf="@id/animationView"
             android:text="Hello, Namaste, Bonjour, Hola, Konichiwa User!"
             android:textColor="@color/background_color"
@@ -101,6 +101,113 @@
                 app:layout_constraintTop_toBottomOf="@id/quote_image" />
 
 
+            <TextView
+                android:id="@+id/card1"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/blue_card"
+                android:text="Self love and acceptance"
+                android:gravity="center"
+                android:padding="16dp"
+                android:textAlignment="center"
+                android:textColor="@color/background_color"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/card2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/materials_header" />
+
+            <TextView
+                android:id="@+id/card2"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/blue_card"
+                android:text="7 Symptoms of Stress"
+                android:gravity="center"
+                android:padding="16dp"
+                android:textAlignment="center"
+                android:textColor="@color/background_color"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/card1"
+                app:layout_constraintTop_toBottomOf="@+id/materials_header" />
+
+
+            <TextView
+                android:id="@+id/card3"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/blue_card"
+                android:text="Body shaming men"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textColor="@color/background_color"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/card4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card1" />
+
+            <TextView
+                android:id="@+id/card4"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/blue_card"
+                android:text="Why diagnosis is important"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textColor="@color/background_color"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/card3"
+                app:layout_constraintTop_toBottomOf="@+id/card2" />
+
+
+            <TextView
+                android:id="@+id/card5"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/blue_card"
+                android:text="LGBTQ and mental health"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:padding="16dp"
+                android:textColor="@color/background_color"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/card4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card3" />
+
+            <TextView
+                android:id="@+id/card6"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/blue_card"
+                android:text="Reasons to consult a therapist"
+                android:textAlignment="center"
+                android:textColor="@color/background_color"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:padding="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/card3"
+                app:layout_constraintTop_toBottomOf="@+id/card4" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
