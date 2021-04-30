@@ -7,7 +7,10 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.Objects;
 
@@ -70,6 +73,12 @@ public class HomeFragment extends Fragment {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+        ImageView quote_image = view.findViewById(R.id.quote_image);
+
+        Picasso.get().load("https://firebasestorage.googleapis.com/v0/b/neurocare-6c2b7.appspot.com/o/image.png?alt=media&token=433ecc98-e6a6-4f8e-91da-71cbb8558bb5")
+                .into(quote_image);
+
 
         return view;
     }
