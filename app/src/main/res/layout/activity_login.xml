@@ -462,12 +462,15 @@
 
         <ImageButton
             android:id="@+id/s_google_button"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_below="@id/signin_card"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_toEndOf="@id/signin_card"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="4dp"
+            android:layout_marginStart="16dp"
+            android:layout_below="@id/s_contact_card"
             android:background="#00FFFFFF"
+            android:layout_alignBottom="@id/signin_card"
             android:labelFor="@id/filled_password"
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/ic_google_icon" />

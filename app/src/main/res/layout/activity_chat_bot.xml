@@ -7,45 +7,45 @@
     android:background="@color/background_color"
     tools:context=".ChatBotActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:orientation="vertical"
-        android:background="@drawable/shadow">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="vertical"
+            android:background="@drawable/shadow">
 
-        <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/animationView"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="32dp"
-            app:lottie_autoPlay="true"
-            app:lottie_fileName="chatbot-anim.json"
-            app:lottie_loop="true"
-            app:lottie_url="https://assets8.lottiefiles.com/packages/lf20_g7zx4ni5.json" />
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animationView"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="chatbot-anim.json"
+                app:lottie_loop="true"
+                app:lottie_url="https://assets8.lottiefiles.com/packages/lf20_g7zx4ni5.json" />
 
 
-        <TextView
-            android:id="@+id/top_header"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hi User!"
-            android:layout_marginStart="24dp"
-            android:textColor="@color/background_color"
-            android:textSize="24sp" />
+            <TextView
+                android:id="@+id/top_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="Hi User!"
+                android:textColor="@color/background_color"
+                android:textSize="24sp" />
 
-        <TextView
-            android:id="@+id/top_header1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Let's take a ride!"
-            android:layout_marginBottom="16dp"
-            android:layout_marginStart="24dp"
-            android:textColor="@color/background_color"
-            android:textSize="16sp" />
+            <TextView
+                android:id="@+id/top_header1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginBottom="16dp"
+                android:text="Let's take a ride!"
+                android:textColor="@color/background_color"
+                android:textSize="16sp" />
 
-    </LinearLayout>
+        </LinearLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -83,10 +83,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="Send a message!"
-                android:textColor="@color/text_color"
-                android:textColorHint="@color/hint_text_color"
                 android:paddingStart="24sp"
-                android:paddingEnd="24dp" />
+                android:paddingEnd="24dp"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/hint_text_color" />
 
         </soup.neumorphism.NeumorphCardView>
 
