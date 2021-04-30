@@ -7,10 +7,13 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.squareup.picasso.Picasso;
 
 import java.util.Objects;
 
@@ -29,6 +32,8 @@ public class ProfileFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    ImageView profile_photo;
 
     public ProfileFragment() {
         // Required empty public constructor
@@ -68,6 +73,18 @@ public class ProfileFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
 
         Toast.makeText(getActivity(), Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getDisplayName(), Toast.LENGTH_SHORT).show();
+
+        TextView name = view.findViewById(R.id.user_name);
+        TextView email = view.findViewById(R.id.email);
+        profile_photo = view.findViewById(R.id.profile_photo);
+
+        name.setText(Objects.requireNonNull(LoginActivity.auth.getCurrentUser()).getDisplayName());
+        email.setText(Objects.requireNonNull(LoginActivity.auth.getCurrentUser()).getEmail());
+
+        profile_photo.setClipToOutline(true);
+
+        Picasso.get().load(Objects.requireNonNull(LoginActivity.auth.getCurrentUser()).getPhotoUrl())
+                .into(profile_photo);
 
         return view;
     }

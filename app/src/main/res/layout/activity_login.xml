@@ -16,24 +16,40 @@
         android:clipChildren="false"
         android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/logo"
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="logo-anim.json"
+            app:lottie_loop="true"
+            app:lottie_url="https://assets9.lottiefiles.com/packages/lf20_xudbbfnj.json" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/header"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/animationView"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="32dp"
-            tools:srcCompat="@tools:sample/avatars" />
+            android:fontFamily="@font/courgette"
+            android:text="NeuroCare"
+            android:textColor="@color/background_color"
+            android:textSize="36sp"/>
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/header1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/logo"
+            android:layout_below="@id/header"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="16dp"
             android:text="Login"
             android:textColor="@color/background_color"
-            android:textSize="36sp"
+            android:textSize="24sp"
             tools:layout_editor_absoluteX="32dp"
             tools:layout_editor_absoluteY="128dp" />
 
@@ -45,7 +61,7 @@
             android:layout_centerHorizontal="true"
             android:text="Login"
             android:textColor="@color/background_color"
-            android:textSize="36sp" />
+            android:textSize="18sp" />
 
         <club.cred.synth.views.SynthButton
             android:id="@+id/login_tab"
@@ -53,8 +69,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/header2"
             android:layout_alignParentStart="true"
-            android:layout_margin="32dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginStart="32dp"
             android:paddingStart="32dp"
             android:paddingTop="8dp"
             android:paddingEnd="32dp"
@@ -71,9 +88,10 @@
             android:layout_below="@id/header2"
             android:layout_alignEnd="@id/login_tab"
             android:layout_alignParentEnd="true"
-            android:layout_margin="32dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
             android:paddingStart="32dp"
+            android:layout_marginBottom="16dp"
             android:paddingTop="8dp"
             android:paddingEnd="32dp"
             android:paddingBottom="8dp"
@@ -84,143 +102,376 @@
 
     </RelativeLayout>
 
-    <soup.neumorphism.NeumorphCardView
-        style="@style/Widget.Neumorph.CardView"
-        android:id="@+id/username_card"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="4dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginTop="16dp"
-        android:padding="12dp"
-        android:layout_below="@id/top_layout"
-        app:neumorph_backgroundColor="@color/background_color"
-        app:neumorph_inset="12dp"
-        app:neumorph_insetBottom="12dp"
-        app:neumorph_insetEnd="12dp"
-        app:neumorph_insetStart="12dp"
-        app:neumorph_insetTop="12dp"
-        app:neumorph_lightSource="leftBottom"
-        app:neumorph_shadowColorDark="@color/dark_white"
-        app:neumorph_shadowColorLight="@color/white"
-        app:neumorph_shadowElevation="6dp"
-        app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
-        app:neumorph_shapeType="basin"
-        app:neumorph_strokeColor="@color/dark_white"
-        app:neumorph_strokeWidth="1dp">
-
-        <EditText
-            android:id="@+id/username_field"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Username"
-            android:textColorHint="@color/hint_text_color"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
-            android:background="#00FFFFFF"
-            android:textColor="@color/text_color"
-            android:textSize="16sp"/>
-
-    </soup.neumorphism.NeumorphCardView>
-
-    <soup.neumorphism.NeumorphCardView
-        style="@style/Widget.Neumorph.CardView"
-        android:id="@+id/password_card"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="4dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:padding="12dp"
-        android:layout_below="@id/username_card"
-        app:neumorph_backgroundColor="@color/background_color"
-        app:neumorph_inset="12dp"
-        app:neumorph_insetBottom="12dp"
-        app:neumorph_insetEnd="12dp"
-        app:neumorph_insetStart="12dp"
-        app:neumorph_insetTop="12dp"
-        app:neumorph_lightSource="leftBottom"
-        app:neumorph_shadowColorDark="@color/dark_white"
-        app:neumorph_shadowColorLight="@color/white"
-        app:neumorph_shadowElevation="6dp"
-        app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
-        app:neumorph_shapeType="basin"
-        app:neumorph_strokeColor="@color/dark_white"
-        app:neumorph_strokeWidth="1dp">
-
-        <EditText
-            android:id="@+id/password_field"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Password"
-            android:paddingStart="16dp"
-            android:textColorHint="@color/hint_text_color"
-            android:paddingEnd="16dp"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
-            android:background="#00FFFFFF"
-            android:textColor="@color/text_color"
-            android:textSize="16sp"/>
-
-    </soup.neumorphism.NeumorphCardView>
-
-    <soup.neumorphism.NeumorphCardView
-        style="@style/Widget.Neumorph.CardView"
-        android:id="@+id/login_card"
-        android:layout_height="wrap_content"
+    <RelativeLayout
+        android:visibility="visible"
+        android:id="@+id/login_layout"
         android:layout_width="wrap_content"
-        android:layout_below="@id/password_card"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="16dp"
-        android:padding="12dp"
-        app:neumorph_backgroundColor="@color/background_color"
-        app:neumorph_inset="12dp"
-        app:neumorph_insetBottom="12dp"
-        app:neumorph_insetEnd="12dp"
-        app:neumorph_insetStart="12dp"
-        app:neumorph_insetTop="12dp"
-        app:neumorph_lightSource="rightTop"
-        app:neumorph_shadowColorDark="@color/dark_white"
-        app:neumorph_shadowColorLight="@color/white"
-        app:neumorph_shadowElevation="6dp"
-        app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
-        app:neumorph_shapeType="basin"
-        app:neumorph_strokeColor="@color/dark_white"
-        app:neumorph_strokeWidth="1dp">
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_layout">
 
-<TextView
-    android:id="@+id/login_button"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Login"
-    android:paddingStart="16dp"
-    android:paddingEnd="16dp"
-    android:paddingTop="8dp"
-    android:paddingBottom="8dp"
-    android:background="#00FFFFFF"
-    android:textColor="@color/text_color"
-    android:textSize="16sp"/>
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/username_card"
+            style="@style/Widget.Neumorph.CardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="4dp"
+            android:padding="12dp"
+            app:neumorph_backgroundColor="@color/background_color"
+            app:neumorph_inset="12dp"
+            app:neumorph_insetBottom="12dp"
+            app:neumorph_insetEnd="12dp"
+            app:neumorph_insetStart="12dp"
+            app:neumorph_insetTop="12dp"
+            app:neumorph_lightSource="rightTop"
+            app:neumorph_shadowColorDark="@color/dark_white"
+            app:neumorph_shadowColorLight="@color/white"
+            app:neumorph_shadowElevation="6dp"
+            app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+            app:neumorph_shapeType="pressed"
+            app:neumorph_strokeColor="@color/dark_white"
+            app:neumorph_strokeWidth="1dp">
 
-    </soup.neumorphism.NeumorphCardView>
+            <EditText
+                android:id="@+id/username_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00FFFFFF"
+                android:hint="Email"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/hint_text_color"
+                android:textSize="16sp" />
 
-    <ImageButton
-        android:id="@+id/google_button"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_below="@id/login_card"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="64dp"
-        android:background="#00FFFFFF"
-        android:labelFor="@id/filled_password"
-        android:scaleType="fitCenter"
-        app:srcCompat="@drawable/ic_google_icon" />
+        </soup.neumorphism.NeumorphCardView>
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/password_card"
+            style="@style/Widget.Neumorph.CardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/username_card"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="4dp"
+            android:padding="12dp"
+            app:neumorph_backgroundColor="@color/background_color"
+            app:neumorph_inset="12dp"
+            app:neumorph_insetBottom="12dp"
+            app:neumorph_insetEnd="12dp"
+            app:neumorph_insetStart="12dp"
+            app:neumorph_insetTop="12dp"
+            app:neumorph_lightSource="rightTop"
+            app:neumorph_shadowColorDark="@color/dark_white"
+            app:neumorph_shadowColorLight="@color/white"
+            app:neumorph_shadowElevation="6dp"
+            app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+            app:neumorph_shapeType="pressed"
+            app:neumorph_strokeColor="@color/dark_white"
+            app:neumorph_strokeWidth="1dp">
+
+            <EditText
+                android:id="@+id/password_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00FFFFFF"
+                android:hint="Password"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/hint_text_color"
+                android:textSize="16sp" />
+
+        </soup.neumorphism.NeumorphCardView>
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/login_card"
+            style="@style/Widget.Neumorph.CardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/password_card"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="16dp"
+            android:padding="12dp"
+            app:neumorph_backgroundColor="@color/background_color"
+            app:neumorph_inset="12dp"
+            app:neumorph_insetBottom="12dp"
+            app:neumorph_insetEnd="12dp"
+            app:neumorph_insetStart="12dp"
+            app:neumorph_insetTop="12dp"
+            app:neumorph_lightSource="rightTop"
+            app:neumorph_shadowColorDark="@color/dark_white"
+            app:neumorph_shadowColorLight="@color/white"
+            app:neumorph_shadowElevation="6dp"
+            app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+            app:neumorph_shapeType="basin"
+            app:neumorph_strokeColor="@color/dark_white"
+            app:neumorph_strokeWidth="1dp">
+
+            <TextView
+                android:id="@+id/login_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FFFFFF"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="8dp"
+                android:text="Login"
+                android:textColor="@color/text_color"
+                android:textSize="16sp" />
+
+        </soup.neumorphism.NeumorphCardView>
+
+        <ImageButton
+            android:id="@+id/google_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/login_card"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
+            android:background="#00FFFFFF"
+            android:labelFor="@id/filled_password"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_google_icon" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/signin_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_layout">
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/s_username_card"
+            style="@style/Widget.Neumorph.CardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            android:padding="8dp"
+            app:neumorph_backgroundColor="@color/background_color"
+            app:neumorph_inset="12dp"
+            app:neumorph_insetBottom="12dp"
+            app:neumorph_insetEnd="12dp"
+            app:neumorph_insetStart="12dp"
+            app:neumorph_insetTop="12dp"
+            app:neumorph_lightSource="rightTop"
+            app:neumorph_shadowColorDark="@color/dark_white"
+            app:neumorph_shadowColorLight="@color/white"
+            app:neumorph_shadowElevation="6dp"
+            app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+            app:neumorph_shapeType="pressed"
+            app:neumorph_strokeColor="@color/dark_white"
+            app:neumorph_strokeWidth="1dp">
+
+            <EditText
+                android:id="@+id/s_username_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00FFFFFF"
+                android:hint="Username"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/hint_text_color"
+                android:textSize="16sp" />
+
+        </soup.neumorphism.NeumorphCardView>
+
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/s_email_card"
+            style="@style/Widget.Neumorph.CardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/s_username_card"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:padding="8dp"
+            app:neumorph_backgroundColor="@color/background_color"
+            app:neumorph_inset="12dp"
+            app:neumorph_insetBottom="12dp"
+            app:neumorph_insetEnd="12dp"
+            app:neumorph_insetStart="12dp"
+            app:neumorph_insetTop="12dp"
+            app:neumorph_lightSource="rightTop"
+            app:neumorph_shadowColorDark="@color/dark_white"
+            app:neumorph_shadowColorLight="@color/white"
+            app:neumorph_shadowElevation="6dp"
+            app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+            app:neumorph_shapeType="pressed"
+            app:neumorph_strokeColor="@color/dark_white"
+            app:neumorph_strokeWidth="1dp">
+
+            <EditText
+                android:id="@+id/s_email_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00FFFFFF"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/hint_text_color"
+                android:textSize="16sp" />
+
+        </soup.neumorphism.NeumorphCardView>
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/s_password_card"
+            style="@style/Widget.Neumorph.CardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/s_email_card"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:padding="8dp"
+            app:neumorph_backgroundColor="@color/background_color"
+            app:neumorph_inset="12dp"
+            app:neumorph_insetBottom="12dp"
+            app:neumorph_insetEnd="12dp"
+            app:neumorph_insetStart="12dp"
+            app:neumorph_insetTop="12dp"
+            app:neumorph_lightSource="rightTop"
+            app:neumorph_shadowColorDark="@color/dark_white"
+            app:neumorph_shadowColorLight="@color/white"
+            app:neumorph_shadowElevation="6dp"
+            app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+            app:neumorph_shapeType="pressed"
+            app:neumorph_strokeColor="@color/dark_white"
+            app:neumorph_strokeWidth="1dp">
+
+            <EditText
+                android:id="@+id/s_password_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00FFFFFF"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/hint_text_color"
+                android:textSize="16sp" />
+
+        </soup.neumorphism.NeumorphCardView>
+
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/s_contact_card"
+            style="@style/Widget.Neumorph.CardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/s_password_card"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:padding="8dp"
+            app:neumorph_backgroundColor="@color/background_color"
+            app:neumorph_inset="12dp"
+            app:neumorph_insetBottom="12dp"
+            app:neumorph_insetEnd="12dp"
+            app:neumorph_insetStart="12dp"
+            app:neumorph_insetTop="12dp"
+            app:neumorph_lightSource="rightTop"
+            app:neumorph_shadowColorDark="@color/dark_white"
+            app:neumorph_shadowColorLight="@color/white"
+            app:neumorph_shadowElevation="6dp"
+            app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+            app:neumorph_shapeType="pressed"
+            app:neumorph_strokeColor="@color/dark_white"
+            app:neumorph_strokeWidth="1dp">
+
+            <EditText
+                android:id="@+id/s_contact_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00FFFFFF"
+                android:hint="Mobile"
+                android:inputType="phone"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/hint_text_color"
+                android:textSize="16sp" />
+
+        </soup.neumorphism.NeumorphCardView>
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/signin_card"
+            style="@style/Widget.Neumorph.CardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/s_contact_card"
+            android:layout_centerHorizontal="true"
+            android:padding="12dp"
+            app:neumorph_backgroundColor="@color/background_color"
+            app:neumorph_inset="12dp"
+            app:neumorph_insetBottom="12dp"
+            app:neumorph_insetEnd="12dp"
+            app:neumorph_insetStart="12dp"
+            app:neumorph_insetTop="12dp"
+            app:neumorph_lightSource="rightTop"
+            app:neumorph_shadowColorDark="@color/dark_white"
+            app:neumorph_shadowColorLight="@color/white"
+            app:neumorph_shadowElevation="6dp"
+            app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+            app:neumorph_shapeType="basin"
+            app:neumorph_strokeColor="@color/dark_white"
+            app:neumorph_strokeWidth="1dp">
+
+            <TextView
+                android:id="@+id/singin_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FFFFFF"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="8dp"
+                android:text="Login"
+                android:textColor="@color/text_color"
+                android:textSize="16sp" />
+
+        </soup.neumorphism.NeumorphCardView>
+
+        <ImageButton
+            android:id="@+id/s_google_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/signin_card"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
+            android:background="#00FFFFFF"
+            android:labelFor="@id/filled_password"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_google_icon" />
+
+    </RelativeLayout>
 
 </RelativeLayout>

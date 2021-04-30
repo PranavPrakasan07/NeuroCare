@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,12 +23,18 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
+import club.cred.synth.views.SynthButton;
+
 public class LoginActivity extends AppCompatActivity {
     EditText email, password;
     TextView signup_link;
 
     TextView login_button;
     private static final int RC_SIGN_IN = 1;
+
+    SynthButton login_tab, signin_tab;
+
+    RelativeLayout login_layout, signin_layout;
 
     GoogleSignInClient mGoogleSignInClient;
     static FirebaseAuth auth;
@@ -70,6 +77,12 @@ public class LoginActivity extends AppCompatActivity {
         email = findViewById(R.id.email);
         password = findViewById(R.id.password);
 
+        login_tab = findViewById(R.id.login_tab);
+        signin_tab = findViewById(R.id.signup_tab);
+
+        signin_layout = findViewById(R.id.signin_layout);
+        login_layout = findViewById(R.id.login_layout);
+
 //        signup_link = findViewById(R.id.signup_link);
 
         login_button = findViewById(R.id.login_button);
@@ -86,6 +99,22 @@ public class LoginActivity extends AppCompatActivity {
         findViewById(R.id.google_button).setOnClickListener(view -> {
             if (view.getId() == R.id.google_button) {
                 signIn();
+            }
+        });
+
+        signin_tab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                login_layout.setVisibility(View.GONE);
+                signin_layout.setVisibility(View.VISIBLE);
+            }
+        });
+
+        login_tab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                signin_layout.setVisibility(View.GONE);
+                login_layout.setVisibility(View.VISIBLE);
             }
         });
 

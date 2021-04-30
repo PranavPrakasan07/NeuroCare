@@ -49,7 +49,7 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_gravity="bottom"
-        android:background="@color/white"
+        android:background="@color/background_color"
         android:fadingEdge="horizontal"
         app:cnb_menuResource="@menu/nav_menu" />
     </soup.neumorphism.NeumorphCardView>

@@ -21,6 +21,9 @@ public class Home extends AppCompatActivity {
 
         chipNavigationBar.setItemSelected(R.id.chatFragment, true);
 
+
+
+
 //        try {
 //            Bundle extras = getIntent().getExtras();
 //            String toOpen = extras.getString("toOpen");
@@ -42,6 +45,8 @@ public class Home extends AppCompatActivity {
         Log.d("TAG : i", String.valueOf(chipNavigationBar.getSelectedItemId()));
 
         chipNavigationBar.setOnItemSelectedListener(new ChipNavigationBar.OnItemSelectedListener() {
+
+
 
             @Override
             public void onItemSelected(int i) {
