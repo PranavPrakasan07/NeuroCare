@@ -184,7 +184,7 @@
         app:neumorph_insetEnd="12dp"
         app:neumorph_insetStart="12dp"
         app:neumorph_insetTop="12dp"
-        app:neumorph_lightSource="leftBottom"
+        app:neumorph_lightSource="rightTop"
         app:neumorph_shadowColorDark="@color/dark_white"
         app:neumorph_shadowColorLight="@color/white"
         app:neumorph_shadowElevation="6dp"

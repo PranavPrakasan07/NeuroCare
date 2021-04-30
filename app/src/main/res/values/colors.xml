@@ -13,4 +13,5 @@
     <color name="highlight">#40FFFFFF</color>
     <color name="blue_bg">#3C8AFF</color>
     <color name="dark_white">#DDDDDD</color>
+    <color name="transparent">#00FFFFFF</color>
 </resources>
