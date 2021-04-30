@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.NeuroCare" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.NeuroCare" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_200</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -13,4 +13,67 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="button_platform_appearance">
+        <item name="neuLightShadowColor">#64A2FF</item>
+        <item name="neuDarkShadowColor">#2272EA</item>
+        <item name="neuFillStartColor">#3C8AFF</item>
+        <item name="neuFillEndColor">#3C8AFF</item>
+        <item name="neuFillPressedStartColor">#3C8AFF</item>
+        <item name="neuFillPressedEndColor">#3C8AFF</item>
+        <item name="neuBorderStartColor">#3C8AFF</item>
+        <item name="neuBorderEndColor">#3C8AFF</item>
+        <item name="neuBorderPressedStartColor">#3C8AFF</item>
+        <item name="neuBorderPressedEndColor">#3C8AFF</item>
+    </style>
+
+    <style name="button_flat_appearance">
+        <item name="neuButtonStartColor">#3C8AFF</item>
+        <item name="neuButtonEndColor">#3C8AFF</item>
+        <item name="neuButtonBorder1StartColor">#3C8AFF</item>
+        <item name="neuButtonBorder1EndColor">#3C8AFF</item>
+        <item name="neuButtonBorder2StartColor">#3C8AFF</item>
+        <item name="neuButtonBorder2EndColor">#3C8AFF</item>
+        <item name="neuButtonPressedDarkShadowColor">#3C8AFF</item>
+    </style>
+
+    <style name="button_white">
+        <item name="neuButtonStartColor">#DDDDDD</item>
+        <item name="neuButtonEndColor">#FFFCF3</item>
+        <item name="neuButtonBorder1StartColor">#FFFCF3</item>
+        <item name="neuButtonBorder1EndColor">#FFFCF3</item>
+        <item name="neuButtonBorder2StartColor">#FFFCF3</item>
+        <item name="neuButtonBorder2EndColor">#FFFCF3</item>
+        <item name="neuButtonPressedDarkShadowColor">#FFFCF3</item>
+    </style>
+
+    <style name="button_white_appearance">
+        <item name="neuLightShadowColor">#FFFCF3</item>
+        <item name="neuDarkShadowColor">#FFFCF3</item>
+        <item name="neuFillStartColor">#FFFCF3</item>
+        <item name="neuFillEndColor">#FFFCF3</item>
+        <item name="neuFillPressedStartColor">#FFFCF3</item>
+        <item name="neuFillPressedEndColor">#FFFCF3</item>
+        <item name="neuBorderStartColor">#FFFCF3</item>
+        <item name="neuBorderEndColor">#FFFCF3</item>
+        <item name="neuBorderPressedStartColor">#FFFCF3</item>
+        <item name="neuBorderPressedEndColor">#FFFCF3</item>
+    </style>
+
+    <style name="pit_view_appearance">
+        <item name="neuLightShadowColor">#DDDDDD</item>
+        <item name="neuDarkShadowColor">#FFFCF3</item>
+        <item name="softEdgeColor">#3C8AFF</item>
+        <item name="neuCompatColor">#3C8AFF</item>
+    </style>
+
+    <style name="CustomShapeAppearance">
+        <item name="neumorph_cornerFamily">rounded</item>
+        <item name="neumorph_cornerSize">32dp</item>
+        <item name="neumorph_cornerSizeTopLeft">16dp</item>
+        <item name="neumorph_cornerSizeTopRight">16dp</item>
+        <item name="neumorph_cornerSizeBottomLeft">16dp</item>
+        <item name="neumorph_cornerSizeBottomRight">16dp</item>
+    </style>
+
 </resources>

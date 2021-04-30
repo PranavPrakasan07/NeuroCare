@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "126224530227",
+    "project_id": "neurocare-6c2b7",
+    "storage_bucket": "neurocare-6c2b7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:126224530227:android:c41f7b823f5ac7fc2d9c46",
+        "android_client_info": {
+          "package_name": "com.example.neurocare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "126224530227-lvs4e8jd4pukvidhodbghkbd94118urk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQixJjEqR5w2gT0kCrUO80W3kp2-RGSRs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "126224530227-lvs4e8jd4pukvidhodbghkbd94118urk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
