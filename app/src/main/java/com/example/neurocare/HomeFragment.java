@@ -7,6 +7,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+
+import java.util.Objects;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -59,6 +62,15 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
+        TextView user_welcome = view.findViewById(R.id.top_header);
+
+        try {
+            user_welcome.setText("Hello, Namaste, Bonjour, Hola, Konichiwa " + Objects.requireNonNull(LoginActivity.auth.getCurrentUser()).getDisplayName() + "!");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return view;
     }
 }
