@@ -30,6 +30,8 @@ public class HomeFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
+    int card_selected_number = 1;
+
     public HomeFragment() {
         // Required empty public constructor
     }
@@ -68,6 +70,66 @@ public class HomeFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         TextView user_welcome = view.findViewById(R.id.top_header);
 
+        TextView card1, card2, card3, card4, card5, card6;
+
+        card1 = view.findViewById(R.id.card1);
+        card2 = view.findViewById(R.id.card2);
+        card3 = view.findViewById(R.id.card3);
+        card4 = view.findViewById(R.id.card4);
+        card5 = view.findViewById(R.id.card5);
+        card6 = view.findViewById(R.id.card6);
+
+        card1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                card_selected_number = 1;
+                ContentFragment ldf = new ContentFragment ();
+                Bundle args = new Bundle();
+                args.putString("card_number", "1");
+                ldf.setArguments(args);
+
+//Inflate the fragment
+                assert getFragmentManager() != null;
+                getFragmentManager().beginTransaction().add(R.id.fragment, ldf).commit();
+
+            }
+        });
+
+        card2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                card_selected_number = 1;
+            }
+        });
+
+        card3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                card_selected_number = 1;
+            }
+        });
+
+        card4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                card_selected_number = 1;
+            }
+        });
+
+        card5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                card_selected_number = 1;
+            }
+        });
+
+        card6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                card_selected_number = 1;
+            }
+        });
+
         try {
             user_welcome.setText("Hello, Namaste, Bonjour, Hola, Konichiwa " + Objects.requireNonNull(LoginActivity.auth.getCurrentUser()).getDisplayName() + "!");
         } catch (Exception e) {
@@ -78,6 +140,8 @@ public class HomeFragment extends Fragment {
 
         Picasso.get().load("https://firebasestorage.googleapis.com/v0/b/neurocare-6c2b7.appspot.com/o/image.png?alt=media&token=433ecc98-e6a6-4f8e-91da-71cbb8558bb5")
                 .into(quote_image);
+
+        Fragment selectedContent = null;
 
 
         return view;
