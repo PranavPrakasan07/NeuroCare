@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
@@ -66,6 +67,8 @@ public class ContentFragment extends Fragment {
         ImageButton back_button = view.findViewById(R.id.back_button);
         ImageView image = view.findViewById(R.id.image);
 
+        TextView top_heading = view.findViewById(R.id.top_header);
+
 //        Picasso.get().load("https://firebasestorage.googleapis.com/v0/b/neurocare-6c2b7.appspot.com/o/depression.svg?alt=media&token=c76b3893-9121-4534-b13c-c244845e4e42")
 //                .into(image);
 
@@ -80,6 +83,10 @@ public class ContentFragment extends Fragment {
         try {
             assert getArguments() != null;
             value = getArguments().getString("card_number");
+            String heading = getArguments().getString("header");
+
+            top_heading.setText(heading);
+
         } catch (Exception e) {
             e.printStackTrace();
         }

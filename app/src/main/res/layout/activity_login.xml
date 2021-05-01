@@ -47,9 +47,10 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/header"
             android:layout_centerHorizontal="true"
-            android:text="Login"
+            android:text="There is always someone to hear you out."
             android:textColor="@color/background_color"
-            android:textSize="24sp"
+            android:textSize="18sp"
+            android:gravity="center"
             tools:layout_editor_absoluteX="32dp"
             tools:layout_editor_absoluteY="128dp" />
 
@@ -59,9 +60,10 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/header1"
             android:layout_centerHorizontal="true"
-            android:text="Login"
+            android:text="And we are here for you."
+            android:gravity="center"
             android:textColor="@color/background_color"
-            android:textSize="18sp" />
+            android:textSize="16sp" />
 
         <soup.neumorphism.NeumorphCardView
             android:id="@+id/n_login_card"
@@ -70,7 +72,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/header2"
             android:layout_alignParentStart="true"
-            android:layout_marginStart="32dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="32dp"
             android:layout_marginBottom="16dp"
@@ -79,7 +81,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:neumorph_backgroundColor="@color/blue_bg"
-            app:neumorph_inset="12dp"
+            app:neumorph_inset="10dp"
             app:neumorph_insetBottom="12dp"
             app:neumorph_insetEnd="12dp"
             app:neumorph_insetStart="12dp"
@@ -87,7 +89,7 @@
             app:neumorph_lightSource="leftTop"
             app:neumorph_shadowColorDark="@color/dark_blue"
             app:neumorph_shadowColorLight="@color/light_blue"
-            app:neumorph_shadowElevation="6dp"
+            app:neumorph_shadowElevation="4dp"
             app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
             app:neumorph_shapeType="pressed"
             app:neumorph_strokeColor="@color/dark_white"
@@ -95,14 +97,17 @@
 
             <TextView
                 android:id="@+id/login_tab"
-                android:layout_width="wrap_content"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_alignEnd="@id/login_tab"
                 android:layout_alignParentEnd="true"
                 android:paddingStart="32dp"
                 android:paddingTop="16dp"
                 android:paddingEnd="32dp"
+                android:textAlignment="center"
                 android:paddingBottom="16dp"
+                android:textSize="16sp"
+                android:textColor="@color/blue_white_text"
                 android:text="Login" />
         </soup.neumorphism.NeumorphCardView>
 
@@ -117,7 +122,7 @@
             android:layout_alignParentEnd="true"
             android:layout_marginStart="32dp"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="32dp"
+            android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
             android:padding="4dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -140,12 +145,15 @@
 
             <TextView
                 android:id="@+id/signup_tab"
-                android:layout_width="wrap_content"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:paddingStart="32dp"
                 android:paddingTop="16dp"
                 android:paddingEnd="32dp"
+                android:textAlignment="center"
                 android:paddingBottom="16dp"
+                android:textSize="16sp"
+                android:textColor="@color/blue_white_text"
                 android:text="Sign Up" />
 
         </soup.neumorphism.NeumorphCardView>
@@ -193,6 +201,7 @@
                 android:hint="Email"
                 android:paddingStart="16dp"
                 android:paddingTop="8dp"
+                android:inputType="textEmailAddress"
                 android:paddingEnd="16dp"
                 android:paddingBottom="8dp"
                 android:textColor="@color/text_color"
@@ -233,6 +242,7 @@
                 android:layout_height="wrap_content"
                 android:background="#00FFFFFF"
                 android:hint="Password"
+                android:inputType="textPassword"
                 android:paddingStart="16dp"
                 android:paddingTop="8dp"
                 android:paddingEnd="16dp"
@@ -269,7 +279,7 @@
 
             <TextView
                 android:id="@+id/login_button"
-                android:layout_width="wrap_content"
+                android:layout_width="125dp"
                 android:layout_height="wrap_content"
                 android:background="#00FFFFFF"
                 android:paddingStart="16dp"
@@ -277,6 +287,7 @@
                 android:paddingEnd="16dp"
                 android:paddingBottom="8dp"
                 android:text="Login"
+                android:textAlignment="center"
                 android:textColor="@color/blue_bg"
                 android:textSize="16sp" />
 
@@ -319,10 +330,10 @@
             app:neumorph_insetEnd="12dp"
             app:neumorph_insetStart="12dp"
             app:neumorph_insetTop="12dp"
-            app:neumorph_lightSource="rightTop"
+            app:neumorph_lightSource="leftTop"
             app:neumorph_shadowColorDark="@color/dark_white"
             app:neumorph_shadowColorLight="@color/white"
-            app:neumorph_shadowElevation="6dp"
+            app:neumorph_shadowElevation="2dp"
             app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
             app:neumorph_shapeType="pressed"
             app:neumorph_strokeColor="@color/dark_white"
@@ -338,6 +349,7 @@
                 android:paddingTop="8dp"
                 android:paddingEnd="16dp"
                 android:paddingBottom="8dp"
+                android:inputType="textPersonName"
                 android:textColor="@color/text_color"
                 android:textColorHint="@color/hint_text_color"
                 android:textSize="16sp" />
@@ -361,10 +373,10 @@
             app:neumorph_insetEnd="12dp"
             app:neumorph_insetStart="12dp"
             app:neumorph_insetTop="12dp"
-            app:neumorph_lightSource="rightTop"
+            app:neumorph_lightSource="leftTop"
             app:neumorph_shadowColorDark="@color/dark_white"
             app:neumorph_shadowColorLight="@color/white"
-            app:neumorph_shadowElevation="6dp"
+            app:neumorph_shadowElevation="2dp"
             app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
             app:neumorph_shapeType="pressed"
             app:neumorph_strokeColor="@color/dark_white"
@@ -403,10 +415,10 @@
             app:neumorph_insetEnd="12dp"
             app:neumorph_insetStart="12dp"
             app:neumorph_insetTop="12dp"
-            app:neumorph_lightSource="rightTop"
+            app:neumorph_lightSource="leftTop"
             app:neumorph_shadowColorDark="@color/dark_white"
             app:neumorph_shadowColorLight="@color/white"
-            app:neumorph_shadowElevation="6dp"
+            app:neumorph_shadowElevation="2dp"
             app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
             app:neumorph_shapeType="pressed"
             app:neumorph_strokeColor="@color/dark_white"
@@ -446,10 +458,10 @@
             app:neumorph_insetEnd="12dp"
             app:neumorph_insetStart="12dp"
             app:neumorph_insetTop="12dp"
-            app:neumorph_lightSource="rightTop"
+            app:neumorph_lightSource="leftTop"
             app:neumorph_shadowColorDark="@color/dark_white"
             app:neumorph_shadowColorLight="@color/white"
-            app:neumorph_shadowElevation="6dp"
+            app:neumorph_shadowElevation="4dp"
             app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
             app:neumorph_shapeType="pressed"
             app:neumorph_strokeColor="@color/dark_white"
@@ -497,7 +509,7 @@
 
             <TextView
                 android:id="@+id/singin_button"
-                android:layout_width="wrap_content"
+                android:layout_width="125dp"
                 android:layout_height="wrap_content"
                 android:background="#00FFFFFF"
                 android:paddingStart="16dp"
@@ -505,6 +517,7 @@
                 android:paddingEnd="16dp"
                 android:paddingBottom="8dp"
                 android:text="Sign in"
+                android:textAlignment="center"
                 android:textColor="@color/blue_bg"
                 android:textSize="16sp" />
 

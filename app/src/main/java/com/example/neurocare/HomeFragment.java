@@ -85,6 +85,7 @@ public class HomeFragment extends Fragment {
             ContentFragment ldf = new ContentFragment();
             Bundle args = new Bundle();
             args.putString("card_number", "1");
+            args.putString("header", card1.getText().toString());
             ldf.setArguments(args);
 
             assert getFragmentManager() != null;
@@ -97,6 +98,7 @@ public class HomeFragment extends Fragment {
             ContentFragment ldf = new ContentFragment();
             Bundle args = new Bundle();
             args.putString("card_number", "2");
+            args.putString("header", card2.getText().toString());
             ldf.setArguments(args);
 
             assert getFragmentManager() != null;
@@ -109,6 +111,7 @@ public class HomeFragment extends Fragment {
             ContentFragment ldf = new ContentFragment();
             Bundle args = new Bundle();
             args.putString("card_number", "3");
+            args.putString("header", card3.getText().toString());
             ldf.setArguments(args);
 
             assert getFragmentManager() != null;
@@ -121,6 +124,7 @@ public class HomeFragment extends Fragment {
             ContentFragment ldf = new ContentFragment();
             Bundle args = new Bundle();
             args.putString("card_number", "1");
+            args.putString("header", card4.getText().toString());
             ldf.setArguments(args);
 
             assert getFragmentManager() != null;
@@ -133,6 +137,7 @@ public class HomeFragment extends Fragment {
             ContentFragment ldf = new ContentFragment();
             Bundle args = new Bundle();
             args.putString("card_number", "5");
+            args.putString("header", card5.getText().toString());
             ldf.setArguments(args);
 
             assert getFragmentManager() != null;
@@ -145,6 +150,7 @@ public class HomeFragment extends Fragment {
             ContentFragment ldf = new ContentFragment();
             Bundle args = new Bundle();
             args.putString("card_number", "6");
+            args.putString("header", card6.getText().toString());
             ldf.setArguments(args);
 
             assert getFragmentManager() != null;

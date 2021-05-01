@@ -161,7 +161,6 @@
                     android:textSize="16sp" />
             </soup.neumorphism.NeumorphCardView>
 
-
             <soup.neumorphism.NeumorphCardView
                 android:id="@+id/card4_layout"
                 style="@style/Widget.Neumorph.CardView"
@@ -233,7 +232,7 @@
                     android:background="@drawable/blue_card"
                     android:gravity="center"
                     android:padding="16dp"
-                    android:text="Self love and acceptance"
+                    android:text="Body Shaming Men"
                     android:textAlignment="center"
                     android:textColor="@color/background_color"
                     android:textSize="16sp" />
@@ -272,7 +271,7 @@
                     android:background="@drawable/blue_card"
                     android:gravity="center"
                     android:padding="16dp"
-                    android:text="7 Symptoms of Stress"
+                    android:text="Why diagnosis is important"
                     android:textAlignment="center"
                     android:textColor="@color/background_color"
                     android:textSize="16sp" />
@@ -311,7 +310,7 @@
                     android:background="@drawable/blue_card"
                     android:gravity="center"
                     android:padding="16dp"
-                    android:text="Self love and acceptance"
+                    android:text="LGBTQ and mental health"
                     android:textAlignment="center"
                     android:textColor="@color/background_color"
                     android:textSize="16sp" />
@@ -350,7 +349,7 @@
                     android:background="@drawable/blue_card"
                     android:gravity="center"
                     android:padding="16dp"
-                    android:text="7 Symptoms of Stress"
+                    android:text="Reasons to consult a therapist"
                     android:textAlignment="center"
                     android:textColor="@color/background_color"
                     android:textSize="16sp" />

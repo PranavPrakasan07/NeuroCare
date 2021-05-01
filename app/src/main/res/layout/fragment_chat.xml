@@ -33,6 +33,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginStart="24dp"
             android:layout_marginBottom="24dp"
+            android:fontFamily="@font/poppins_semibold"
             android:text="Hi User!"
             android:textColor="@color/background_color"
             android:textSize="28sp" />
