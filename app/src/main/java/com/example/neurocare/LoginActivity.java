@@ -26,7 +26,7 @@ import soup.neumorphism.NeumorphCardView;
 import soup.neumorphism.ShapeType;
 
 public class LoginActivity extends AppCompatActivity {
-    EditText email, password;
+    EditText l_email, l_password, s_email, s_password;
     TextView signup_link;
 
     NeumorphCardView n_signin, n_login;
@@ -48,6 +48,7 @@ public class LoginActivity extends AppCompatActivity {
 
         if (currentUser != null) {
             startActivity(new Intent(getApplicationContext(), Home.class));
+            finish();
         }
     }
 
@@ -76,8 +77,11 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-//        email = findViewById(R.id.email);
-//        password = findViewById(R.id.password);
+        l_email = findViewById(R.id.username_field);
+        l_password = findViewById(R.id.password_field);
+
+        s_email = findViewById(R.id.s_username_field);
+        s_password = findViewById(R.id.s_password_field);
 
         login_tab = findViewById(R.id.login_tab);
         signin_tab = findViewById(R.id.signup_tab);
@@ -175,7 +179,6 @@ public class LoginActivity extends AppCompatActivity {
                         Log.d("TAG", "signInWithCredential:success");
                         FirebaseUser user = auth.getCurrentUser();
 
-                        Toast.makeText(this, "Success!", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(getApplicationContext(), Home.class));
                         finish();
 

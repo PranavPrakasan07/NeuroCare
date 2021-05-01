@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background_color">
+
+    <soup.neumorphism.NeumorphCardView
+        android:id="@+id/photo_card"
+        style="@style/Widget.Neumorph.CardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:padding="12dp"
+        app:neumorph_backgroundColor="@color/blue_bg"
+        app:neumorph_inset="12dp"
+        app:neumorph_insetBottom="12dp"
+        app:neumorph_insetEnd="12dp"
+        app:neumorph_insetStart="12dp"
+        app:neumorph_insetTop="12dp"
+        app:neumorph_lightSource="leftTop"
+        app:neumorph_shadowColorDark="@color/dark_blue"
+        app:neumorph_shadowColorLight="@color/light_blue"
+        app:neumorph_shadowElevation="6dp"
+        app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+        app:neumorph_shapeType="flat"
+        app:neumorph_strokeColor="@color/dark_white"
+        app:neumorph_strokeWidth="0dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sender"
+            android:textSize="16sp"
+            android:paddingTop="16dp"
+            android:paddingStart="24dp"
+            android:paddingEnd="24sp"
+            android:paddingBottom="16dp"
+            android:textColor="@color/background_color"/>
+
+    </soup.neumorphism.NeumorphCardView>
+
+</RelativeLayout>

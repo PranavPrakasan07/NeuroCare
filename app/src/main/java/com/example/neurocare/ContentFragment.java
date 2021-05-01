@@ -135,8 +135,6 @@ public class ContentFragment extends Fragment {
                             assert map != null;
                             String s = map.toString();
 
-                            Toast.makeText(getActivity(), s, Toast.LENGTH_SHORT).show();
-
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
@@ -275,8 +273,6 @@ public class ContentFragment extends Fragment {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-        Toast.makeText(getActivity(), "I'm here" + value, Toast.LENGTH_SHORT).show();
 
         return view;
     }

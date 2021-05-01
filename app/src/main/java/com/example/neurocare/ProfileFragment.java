@@ -74,12 +74,6 @@ public class ProfileFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
 
-        try {
-            Toast.makeText(getActivity(), Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getDisplayName(), Toast.LENGTH_SHORT).show();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
         TextView name = view.findViewById(R.id.user_name);
         TextView email = view.findViewById(R.id.email);
 

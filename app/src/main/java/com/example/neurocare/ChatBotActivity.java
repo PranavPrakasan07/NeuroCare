@@ -78,7 +78,6 @@ public class ChatBotActivity extends AppCompatActivity {
         }
 
         chatbox.setOnTouchListener((v, event) -> {
-            Toast.makeText(ChatBotActivity.this, "Touched!", Toast.LENGTH_SHORT).show();
 
             mic_button.setImageResource(R.drawable.ic_send);
             isSendButton = true;
@@ -135,7 +134,6 @@ public class ChatBotActivity extends AppCompatActivity {
                 String response = data.get(0);
 
                 message_text.setText(response);
-                Toast.makeText(ChatBotActivity.this, response, Toast.LENGTH_SHORT).show();
 
             }
 

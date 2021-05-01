@@ -19,7 +19,6 @@
         <activity android:name=".Home" />
         <activity android:name=".MainActivity2" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".SignUpActivity" />
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

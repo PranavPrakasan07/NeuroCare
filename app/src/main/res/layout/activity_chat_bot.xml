@@ -146,7 +146,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-
             <soup.neumorphism.NeumorphCardView
                 android:id="@+id/message_layout"
                 style="@style/Widget.Neumorph.CardView"

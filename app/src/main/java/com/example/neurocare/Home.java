@@ -19,7 +19,7 @@ public class Home extends AppCompatActivity {
 
         chipNavigationBar = findViewById(R.id.bottom_nav_bar);
 
-        chipNavigationBar.setItemSelected(R.id.chatFragment, true);
+        chipNavigationBar.setItemSelected(R.id.homeFragment, true);
 
 
 //        try {
