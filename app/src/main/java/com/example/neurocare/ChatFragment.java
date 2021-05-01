@@ -15,6 +15,8 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseUser;
+
 import java.util.Objects;
 
 import soup.neumorphism.NeumorphCardView;
@@ -107,10 +109,13 @@ public class ChatFragment extends Fragment {
                 }
             }
         });
-        try {
+
+        FirebaseUser currentUser = LoginActivity.auth.getCurrentUser();
+
+        if (currentUser != null) {
             user_welcome.setText("Hi " + Objects.requireNonNull(LoginActivity.auth.getCurrentUser()).getDisplayName() + "!");
-        } catch (Exception e) {
-            e.printStackTrace();
+        } else {
+            ;
         }
 
         header.setOnClickListener(new View.OnClickListener() {

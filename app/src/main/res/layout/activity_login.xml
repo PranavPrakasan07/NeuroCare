@@ -277,7 +277,7 @@
                 android:paddingEnd="16dp"
                 android:paddingBottom="8dp"
                 android:text="Login"
-                android:textColor="@color/text_color"
+                android:textColor="@color/blue_bg"
                 android:textSize="16sp" />
 
         </soup.neumorphism.NeumorphCardView>
@@ -505,7 +505,7 @@
                 android:paddingEnd="16dp"
                 android:paddingBottom="8dp"
                 android:text="Sign in"
-                android:textColor="@color/text_color"
+                android:textColor="@color/blue_bg"
                 android:textSize="16sp" />
 
         </soup.neumorphism.NeumorphCardView>

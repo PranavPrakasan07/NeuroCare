@@ -51,7 +51,11 @@ public class ChatBotActivity extends AppCompatActivity {
         mic_button = findViewById(R.id.mic_button);
         chatbox = findViewById(R.id.chatbox);
 
-        user_welcome.setText("Hi " + Objects.requireNonNull(LoginActivity.auth.getCurrentUser()).getDisplayName() + "!");
+        try {
+            user_welcome.setText("Hi " + Objects.requireNonNull(LoginActivity.auth.getCurrentUser()).getDisplayName() + "!");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         if (ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
             checkPermission();

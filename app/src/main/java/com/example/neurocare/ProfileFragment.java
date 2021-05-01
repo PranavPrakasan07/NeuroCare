@@ -1,5 +1,6 @@
 package com.example.neurocare;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -72,19 +74,40 @@ public class ProfileFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
 
-        Toast.makeText(getActivity(), Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getDisplayName(), Toast.LENGTH_SHORT).show();
+        try {
+            Toast.makeText(getActivity(), Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getDisplayName(), Toast.LENGTH_SHORT).show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         TextView name = view.findViewById(R.id.user_name);
         TextView email = view.findViewById(R.id.email);
+
+        ImageButton logout = view.findViewById(R.id.logout_button);
+
         profile_photo = view.findViewById(R.id.profile_photo);
 
-        name.setText(Objects.requireNonNull(LoginActivity.auth.getCurrentUser()).getDisplayName());
-        email.setText(Objects.requireNonNull(LoginActivity.auth.getCurrentUser()).getEmail());
+        logout.setOnClickListener(v -> {
+            FirebaseAuth.getInstance().signOut();
+            startActivity(new Intent(getActivity(), LoginActivity.class));
+        });
 
         profile_photo.setClipToOutline(true);
 
-        Picasso.get().load(Objects.requireNonNull(LoginActivity.auth.getCurrentUser()).getPhotoUrl())
-                .into(profile_photo);
+        FirebaseUser currentUser = LoginActivity.auth.getCurrentUser();
+
+        if (currentUser != null) {
+//            logout.setVisibility(View.VISIBLE);
+            Picasso.get().load(Objects.requireNonNull(LoginActivity.auth.getCurrentUser()).getPhotoUrl())
+                    .into(profile_photo);
+            name.setText(Objects.requireNonNull(LoginActivity.auth.getCurrentUser()).getDisplayName());
+            email.setText(Objects.requireNonNull(LoginActivity.auth.getCurrentUser()).getEmail());
+        } else {
+//            logout.setVisibility(View.GONE);
+            Picasso.get().load("https://firebasestorage.googleapis.com/v0/b/neurocare-6c2b7.appspot.com/o/profile.png?alt=media&token=4bc702ec-92c7-424b-be76-b20d49e24ee7")
+                    .into(profile_photo);
+        }
+
 
         return view;
     }

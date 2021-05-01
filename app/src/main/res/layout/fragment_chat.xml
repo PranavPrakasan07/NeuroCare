@@ -13,6 +13,19 @@
         android:layout_height="200dp"
         android:background="@drawable/shadow">
 
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="high-five-anim.json"
+            app:lottie_loop="true"
+            app:lottie_url="https://assets8.lottiefiles.com/packages/lf20_g7zx4ni5.json" />
+
         <TextView
             android:id="@+id/top_header"
             android:layout_width="wrap_content"

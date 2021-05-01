@@ -69,7 +69,6 @@ public class ContentFragment extends Fragment {
 //        Picasso.get().load("https://firebasestorage.googleapis.com/v0/b/neurocare-6c2b7.appspot.com/o/depression.svg?alt=media&token=c76b3893-9121-4534-b13c-c244845e4e42")
 //                .into(image);
 
-
         back_button.setOnClickListener(v -> {
             HomeFragment ldf = new HomeFragment();
 

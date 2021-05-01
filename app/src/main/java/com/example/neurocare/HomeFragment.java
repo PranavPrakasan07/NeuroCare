@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseUser;
 import com.squareup.picasso.Picasso;
 
 import java.util.Objects;
@@ -151,10 +152,12 @@ public class HomeFragment extends Fragment {
 
         });
 
-        try {
+        FirebaseUser currentUser = LoginActivity.auth.getCurrentUser();
+
+        if (currentUser != null) {
             user_welcome.setText("Hello, Namaste, Bonjour, Hola, Konichiwa " + Objects.requireNonNull(LoginActivity.auth.getCurrentUser()).getDisplayName() + "!");
-        } catch (Exception e) {
-            e.printStackTrace();
+        } else {
+            ;
         }
 
         ImageView quote_image = view.findViewById(R.id.quote_image);
