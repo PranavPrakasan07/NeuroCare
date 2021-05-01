@@ -8,7 +8,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.squareup.picasso.Picasso;
+
+import java.util.Objects;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -64,6 +69,12 @@ public class ContentFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_content, container, false);
 
         ImageButton back_button = view.findViewById(R.id.back_button);
+        ImageView image = view.findViewById(R.id.image);
+
+//        Picasso.get().load("https://firebasestorage.googleapis.com/v0/b/neurocare-6c2b7.appspot.com/o/depression.svg?alt=media&token=c76b3893-9121-4534-b13c-c244845e4e42")
+//                .into(image);
+
+
 
         back_button.setOnClickListener(new View.OnClickListener() {
             @Override

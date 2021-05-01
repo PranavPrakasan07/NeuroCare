@@ -14,4 +14,8 @@
     <color name="blue_bg">#3C8AFF</color>
     <color name="dark_white">#DDDDDD</color>
     <color name="transparent">#00FFFFFF</color>
+    
+    <color name="blue_dark">#C6C6C6</color>
+    <color name="blue_light">#FFFCF3</color>
+    
 </resources>

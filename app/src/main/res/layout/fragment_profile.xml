@@ -49,7 +49,7 @@
         app:neumorph_shadowColorLight="@color/white"
         app:neumorph_shadowElevation="6dp"
         app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
-        app:neumorph_shapeType="pressed"
+        app:neumorph_shapeType="flat"
         app:neumorph_strokeColor="@color/dark_white"
         app:neumorph_strokeWidth="1dp">
 
@@ -94,7 +94,7 @@
         app:neumorph_shadowColorLight="@color/white"
         app:neumorph_shadowElevation="6dp"
         app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
-        app:neumorph_shapeType="pressed"
+        app:neumorph_shapeType="basin"
         app:neumorph_strokeColor="@color/dark_white"
         app:neumorph_strokeWidth="1dp">
 
@@ -141,7 +141,7 @@
             app:neumorph_shadowColorLight="@color/white"
             app:neumorph_shadowElevation="6dp"
             app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
-            app:neumorph_shapeType="pressed"
+            app:neumorph_shapeType="basin"
             app:neumorph_strokeColor="@color/dark_white"
             app:neumorph_strokeWidth="1dp">
 
@@ -176,7 +176,7 @@
             app:neumorph_shadowColorLight="@color/white"
             app:neumorph_shadowElevation="6dp"
             app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
-            app:neumorph_shapeType="pressed"
+            app:neumorph_shapeType="basin"
             app:neumorph_strokeColor="@color/dark_white"
             app:neumorph_strokeWidth="1dp">
 
@@ -211,7 +211,7 @@
             app:neumorph_shadowColorLight="@color/white"
             app:neumorph_shadowElevation="6dp"
             app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
-            app:neumorph_shapeType="pressed"
+            app:neumorph_shapeType="basin"
             app:neumorph_strokeColor="@color/dark_white"
             app:neumorph_strokeWidth="1dp">
 

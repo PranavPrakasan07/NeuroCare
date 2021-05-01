@@ -88,7 +88,6 @@ public class HomeFragment extends Fragment {
                 args.putString("card_number", "1");
                 ldf.setArguments(args);
 
-//Inflate the fragment
                 assert getFragmentManager() != null;
                 getFragmentManager().beginTransaction().add(R.id.fragment, ldf).commit();
 
@@ -98,35 +97,75 @@ public class HomeFragment extends Fragment {
         card2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                card_selected_number = 1;
+                card_selected_number = 2;
+                ContentFragment ldf = new ContentFragment ();
+                Bundle args = new Bundle();
+                args.putString("card_number", "2");
+                ldf.setArguments(args);
+
+                assert getFragmentManager() != null;
+                getFragmentManager().beginTransaction().add(R.id.fragment, ldf).commit();
+
             }
         });
 
         card3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                card_selected_number = 1;
+                card_selected_number = 3;
+                ContentFragment ldf = new ContentFragment ();
+                Bundle args = new Bundle();
+                args.putString("card_number", "3");
+                ldf.setArguments(args);
+
+                assert getFragmentManager() != null;
+                getFragmentManager().beginTransaction().add(R.id.fragment, ldf).commit();
+
             }
         });
 
         card4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                card_selected_number = 1;
+                card_selected_number = 4;
+                ContentFragment ldf = new ContentFragment ();
+                Bundle args = new Bundle();
+                args.putString("card_number", "1");
+                ldf.setArguments(args);
+
+                assert getFragmentManager() != null;
+                getFragmentManager().beginTransaction().add(R.id.fragment, ldf).commit();
+
             }
         });
 
         card5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                card_selected_number = 1;
+                card_selected_number = 5;
+                ContentFragment ldf = new ContentFragment ();
+                Bundle args = new Bundle();
+                args.putString("card_number", "5");
+                ldf.setArguments(args);
+
+                assert getFragmentManager() != null;
+                getFragmentManager().beginTransaction().add(R.id.fragment, ldf).commit();
+
             }
         });
 
         card6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                card_selected_number = 1;
+                card_selected_number = 6;
+                ContentFragment ldf = new ContentFragment ();
+                Bundle args = new Bundle();
+                args.putString("card_number", "6");
+                ldf.setArguments(args);
+
+                assert getFragmentManager() != null;
+                getFragmentManager().beginTransaction().add(R.id.fragment, ldf).commit();
+
             }
         });
 

@@ -9,11 +9,11 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <club.cred.synth.views.PitView
-        android:layout_width="100dp"
-        android:layout_height="200dp"
-        app:neuCornerRadius="14dp"
-        app:pitViewAppearance="@style/pit_view_appearance" />
+<!--    <club.cred.synth.views.PitView-->
+<!--        android:layout_width="100dp"-->
+<!--        android:layout_height="200dp"-->
+<!--        app:neuCornerRadius="14dp"-->
+<!--        app:pitViewAppearance="@style/pit_view_appearance" />-->
 
     <club.cred.synth.views.SynthButton
         android:layout_width="100dp"

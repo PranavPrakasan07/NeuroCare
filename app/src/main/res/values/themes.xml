@@ -39,37 +39,6 @@
         <item name="neuButtonPressedDarkShadowColor">#3C8AFF</item>
     </style>
 
-    <style name="button_white">
-        <item name="neuButtonStartColor">#DDDDDD</item>
-        <item name="neuButtonEndColor">#FFFCF3</item>
-        <item name="neuButtonBorder1StartColor">#FFFCF3</item>
-        <item name="neuButtonBorder1EndColor">#FFFCF3</item>
-        <item name="neuButtonBorder2StartColor">#FFFCF3</item>
-        <item name="neuButtonBorder2EndColor">#FFFCF3</item>
-        <item name="neuButtonPressedDarkShadowColor">#FFFCF3</item>
-    </style>
-
-    <style name="button_white_appearance">
-        <item name="neuLightShadowColor">#FFFCF3</item>
-        <item name="neuDarkShadowColor">#FFFCF3</item>
-        <item name="neuFillStartColor">#FFFCF3</item>
-        <item name="neuFillEndColor">#FFFCF3</item>
-        <item name="neuFillPressedStartColor">#FFFCF3</item>
-        <item name="neuFillPressedEndColor">#FFFCF3</item>
-        <item name="neuBorderStartColor">#FFFCF3</item>
-        <item name="neuBorderEndColor">#FFFCF3</item>
-        <item name="neuBorderPressedStartColor">#FFFCF3</item>
-        <item name="neuBorderPressedEndColor">#FFFCF3</item>
-    </style>
-
-    <style name="pit_view_appearance">
-        <item name="neuLightShadowColor">#DDDDDD</item>
-        <item name="neuDarkShadowColor">#FFFCF3</item>
-        <item name="softEdgeColor">#3C8AFF</item>
-        <item name="neuCompatColor">#3C8AFF</item>
-    </style>
-
-
     <style name="CustomShapeAppearance">
         <item name="neumorph_cornerFamily">rounded</item>
         <item name="neumorph_cornerSize">32dp</item>
