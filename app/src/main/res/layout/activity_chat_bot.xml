@@ -133,8 +133,8 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/top_layout"
         android:layout_above="@id/chat_layout"
+        android:layout_below="@id/top_layout"
         android:padding="16dp">
 
         <RelativeLayout
@@ -148,6 +148,8 @@
                 style="@style/Widget.Neumorph.CardView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
                 android:padding="4dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -164,21 +166,20 @@
                 app:neumorph_shadowElevation="6dp"
                 app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
                 app:neumorph_shapeType="flat"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
                 app:neumorph_strokeColor="@color/dark_white"
                 app:neumorph_strokeWidth="0dp">
-            <TextView
-                android:id="@+id/message_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:paddingStart="24dp"
-                android:paddingEnd="24dp"
-                android:paddingTop="16dp"
-                android:paddingBottom="16dp"
-                android:textColor="@color/text_color"
-                android:text=". . ." />
+
+                <TextView
+                    android:id="@+id/message_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="24dp"
+                    android:paddingTop="16dp"
+                    android:paddingEnd="24dp"
+                    android:paddingBottom="16dp"
+                    android:text=". . ."
+                    android:textColor="@color/text_color"
+                    android:textSize="16sp" />
             </soup.neumorphism.NeumorphCardView>
 
         </RelativeLayout>

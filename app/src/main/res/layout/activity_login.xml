@@ -70,6 +70,10 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/header2"
             android:layout_alignParentStart="true"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="16dp"
             android:padding="4dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -86,10 +90,6 @@
             app:neumorph_shadowElevation="6dp"
             app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
             app:neumorph_shapeType="pressed"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginBottom="16dp"
             app:neumorph_strokeColor="@color/dark_white"
             app:neumorph_strokeWidth="0dp">
 
@@ -115,6 +115,10 @@
             android:layout_below="@id/header2"
             android:layout_alignEnd="@id/n_login_card"
             android:layout_alignParentEnd="true"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="16dp"
             android:padding="4dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -131,10 +135,6 @@
             app:neumorph_shadowElevation="6dp"
             app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
             app:neumorph_shapeType="flat"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginBottom="16dp"
-            android:layout_marginStart="32dp"
             app:neumorph_strokeColor="@color/dark_white"
             app:neumorph_strokeWidth="0dp">
 

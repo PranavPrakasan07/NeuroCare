@@ -57,18 +57,14 @@ public class ChatBotActivity extends AppCompatActivity {
             checkPermission();
         }
 
-        chatbox.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                Toast.makeText(ChatBotActivity.this, "Touched!", Toast.LENGTH_SHORT).show();
+        chatbox.setOnTouchListener((v, event) -> {
+            Toast.makeText(ChatBotActivity.this, "Touched!", Toast.LENGTH_SHORT).show();
 
-                mic_button.setImageResource(R.drawable.ic_send);
-                isSendButton = true;
+            mic_button.setImageResource(R.drawable.ic_send);
+            isSendButton = true;
 
-                return false;
-            }
+            return false;
         });
-
 
 
         speechRecognizer = SpeechRecognizer.createSpeechRecognizer(this);
@@ -136,7 +132,7 @@ public class ChatBotActivity extends AppCompatActivity {
 
         mic_button.setOnClickListener(v -> {
 
-            if (isSendButton){
+            if (isSendButton) {
                 message_text.setText(chatbox.getText().toString());
                 chatbox.setText("");
                 mic_button.setImageResource(R.drawable.ic_mic_off);
@@ -153,7 +149,6 @@ public class ChatBotActivity extends AppCompatActivity {
             }
         });
     }
-
 
     @Override
     protected void onDestroy() {

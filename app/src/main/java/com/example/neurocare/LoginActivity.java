@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -23,7 +22,6 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
-import club.cred.synth.views.SynthButton;
 import soup.neumorphism.NeumorphCardView;
 import soup.neumorphism.ShapeType;
 
@@ -109,28 +107,21 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        signin_tab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                login_layout.setVisibility(View.GONE);
-                signin_layout.setVisibility(View.VISIBLE);
+        signin_tab.setOnClickListener(v -> {
+            login_layout.setVisibility(View.GONE);
+            signin_layout.setVisibility(View.VISIBLE);
 
-                n_signin.setShapeType(ShapeType.PRESSED);
-                n_login.setShapeType(ShapeType.FLAT);
-
-            }
+            n_signin.setShapeType(ShapeType.PRESSED);
+            n_login.setShapeType(ShapeType.FLAT);
         });
 
-        login_tab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                signin_layout.setVisibility(View.GONE);
-                login_layout.setVisibility(View.VISIBLE);
+        login_tab.setOnClickListener(v -> {
+            signin_layout.setVisibility(View.GONE);
+            login_layout.setVisibility(View.VISIBLE);
 
-                n_login.setShapeType(ShapeType.PRESSED);
-                n_signin.setShapeType(ShapeType.FLAT);
+            n_login.setShapeType(ShapeType.PRESSED);
+            n_signin.setShapeType(ShapeType.FLAT);
 
-            }
         });
 
         login_button.setOnClickListener(new View.OnClickListener() {

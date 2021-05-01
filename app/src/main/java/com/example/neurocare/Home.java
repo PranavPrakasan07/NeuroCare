@@ -22,8 +22,6 @@ public class Home extends AppCompatActivity {
         chipNavigationBar.setItemSelected(R.id.chatFragment, true);
 
 
-
-
 //        try {
 //            Bundle extras = getIntent().getExtras();
 //            String toOpen = extras.getString("toOpen");
@@ -44,30 +42,24 @@ public class Home extends AppCompatActivity {
 
         Log.d("TAG : i", String.valueOf(chipNavigationBar.getSelectedItemId()));
 
-        chipNavigationBar.setOnItemSelectedListener(new ChipNavigationBar.OnItemSelectedListener() {
+        chipNavigationBar.setOnItemSelectedListener(i -> {
 
+            Fragment selectedFragment = null;
 
-
-            @Override
-            public void onItemSelected(int i) {
-
-                Fragment selectedFragment = null;
-
-                if (chipNavigationBar.getSelectedItemId() == R.id.homeFragment) {
-                    selectedFragment = new HomeFragment();
-                }
-
-                if (chipNavigationBar.getSelectedItemId() == R.id.chatFragment) {
-                    selectedFragment = new ChatFragment();
-                }
-
-                if (chipNavigationBar.getSelectedItemId() == R.id.profileFragment) {
-                    selectedFragment = new ProfileFragment();
-                }
-
-                assert selectedFragment != null;
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment, selectedFragment).commit();
+            if (chipNavigationBar.getSelectedItemId() == R.id.homeFragment) {
+                selectedFragment = new HomeFragment();
             }
+
+            if (chipNavigationBar.getSelectedItemId() == R.id.chatFragment) {
+                selectedFragment = new ChatFragment();
+            }
+
+            if (chipNavigationBar.getSelectedItemId() == R.id.profileFragment) {
+                selectedFragment = new ProfileFragment();
+            }
+
+            assert selectedFragment != null;
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment, selectedFragment).commit();
         });
 
     }

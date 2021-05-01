@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/background_color"
     tools:context=".ChatFragment">
 
@@ -17,10 +17,10 @@
             android:id="@+id/top_header"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hi User!"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="24dp"
             android:layout_marginStart="24dp"
+            android:layout_marginBottom="24dp"
+            android:text="Hi User!"
             android:textColor="@color/background_color"
             android:textSize="28sp" />
 
@@ -28,20 +28,20 @@
 
 
     <soup.neumorphism.NeumorphCardView
-        style="@style/Widget.Neumorph.CardView"
         android:id="@+id/talk__to_chatbot_card"
-        android:layout_height="wrap_content"
+        style="@style/Widget.Neumorph.CardView"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@id/top_layout"
-        android:layout_marginTop="32dp"
         android:layout_centerHorizontal="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
         android:layout_marginBottom="16dp"
         android:paddingStart="24dp"
-        android:paddingEnd="24sp"
         android:paddingTop="12dp"
+        android:paddingEnd="24sp"
         android:paddingBottom="12dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
         app:neumorph_backgroundColor="@color/background_color"
         app:neumorph_inset="12dp"
         app:neumorph_insetBottom="12dp"
@@ -61,30 +61,30 @@
             android:id="@+id/chatbot_header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#00FFFFFF"
+            android:padding="32dp"
             android:text="Talk to Chatbot"
             android:textAlignment="center"
-            android:padding="32dp"
-            android:background="#00FFFFFF"
             android:textColor="@color/text_color"
-            android:textSize="16sp"/>
+            android:textSize="16sp" />
 
     </soup.neumorphism.NeumorphCardView>
 
     <soup.neumorphism.NeumorphCardView
-        style="@style/Widget.Neumorph.CardView"
         android:id="@+id/specialist_info_card"
-        android:layout_height="wrap_content"
+        style="@style/Widget.Neumorph.CardView"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@id/talk__to_chatbot_card"
-        android:layout_marginTop="32dp"
         android:layout_centerHorizontal="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
         android:layout_marginBottom="16dp"
         android:paddingStart="24dp"
-        android:paddingEnd="24sp"
         android:paddingTop="12dp"
+        android:paddingEnd="24sp"
         android:paddingBottom="12dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
         app:neumorph_backgroundColor="@color/background_color"
         app:neumorph_inset="12dp"
         app:neumorph_insetBottom="12dp"
@@ -104,12 +104,12 @@
             android:id="@+id/specialist_header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#00FFFFFF"
+            android:padding="32dp"
             android:text="Specialist Info"
             android:textAlignment="center"
-            android:padding="32dp"
-            android:background="#00FFFFFF"
             android:textColor="@color/text_color"
-            android:textSize="16sp"/>
+            android:textSize="16sp" />
 
     </soup.neumorphism.NeumorphCardView>
 
@@ -117,12 +117,12 @@
         android:id="@+id/floatingActionButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:tint="@color/blue_bg"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="16dp"
         android:clickable="true"
-        android:src="@drawable/ic_message_icon" />
+        android:src="@drawable/ic_message_icon"
+        android:tint="@color/blue_bg" />
 
 </RelativeLayout>

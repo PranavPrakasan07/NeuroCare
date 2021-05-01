@@ -1,9 +1,6 @@
 package com.example.neurocare;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,9 +8,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.squareup.picasso.Picasso;
-
-import java.util.Objects;
+import androidx.fragment.app.Fragment;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -75,15 +70,11 @@ public class ContentFragment extends Fragment {
 //                .into(image);
 
 
+        back_button.setOnClickListener(v -> {
+            HomeFragment ldf = new HomeFragment();
 
-        back_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                HomeFragment ldf = new HomeFragment ();
-
-                assert getFragmentManager() != null;
-                getFragmentManager().beginTransaction().add(R.id.fragment, ldf).commit();
-            }
+            assert getFragmentManager() != null;
+            getFragmentManager().beginTransaction().add(R.id.fragment, ldf).commit();
         });
 
         String value = null;
