@@ -11,7 +11,7 @@
 <!--    <soup.neumorphism.NeumorphCardView-->
 <!--        android:id="@+id/top_layout"-->
 <!--        style="@style/Widget.Neumorph.CardView"-->
-<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_width="match_parent"-->
 <!--        android:layout_height="wrap_content"-->
 <!--        android:padding="4dp"-->
 <!--        app:neumorph_backgroundColor="@color/blue_bg"-->
@@ -20,20 +20,20 @@
 <!--        app:neumorph_insetEnd="12dp"-->
 <!--        app:neumorph_insetStart="12dp"-->
 <!--        app:neumorph_insetTop="12dp"-->
-<!--        app:neumorph_lightSource="rightTop"-->
+<!--        app:neumorph_lightSource="leftTop"-->
 <!--        app:neumorph_shadowColorDark="@color/blue_dark"-->
 <!--        app:neumorph_shadowColorLight="@color/blue_light"-->
 <!--        app:neumorph_shadowElevation="6dp"-->
 <!--        app:neumorph_shapeAppearance="@style/CustomShapeAppearance"-->
-<!--        app:neumorph_shapeType="basin"-->
+<!--        app:neumorph_shapeType="flat"-->
 <!--        app:neumorph_strokeColor="@color/dark_white"-->
-<!--        app:neumorph_strokeWidth="1dp">-->
+<!--        app:neumorph_strokeWidth="0dp">-->
 
         <RelativeLayout
             android:id="@+id/top_layout"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:background="@drawable/blue_bg"
+            android:background="@drawable/shadow"
             android:orientation="vertical">
 
             <com.airbnb.lottie.LottieAnimationView
@@ -139,14 +139,14 @@
                 app:neumorph_insetEnd="12dp"
                 app:neumorph_insetStart="12dp"
                 app:neumorph_insetTop="12dp"
-                app:neumorph_lightSource="rightTop"
+                app:neumorph_lightSource="leftTop"
                 app:neumorph_shadowColorDark="@color/blue_dark"
                 app:neumorph_shadowColorLight="@color/blue_light"
                 app:neumorph_shadowElevation="6dp"
                 app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
                 app:neumorph_shapeType="basin"
                 app:neumorph_strokeColor="@color/dark_white"
-                app:neumorph_strokeWidth="1dp">
+                app:neumorph_strokeWidth="0dp">
 
                 <TextView
                     android:id="@+id/card3"
@@ -178,14 +178,14 @@
                 app:neumorph_insetEnd="12dp"
                 app:neumorph_insetStart="12dp"
                 app:neumorph_insetTop="12dp"
-                app:neumorph_lightSource="rightTop"
+                app:neumorph_lightSource="leftTop"
                 app:neumorph_shadowColorDark="@color/blue_dark"
                 app:neumorph_shadowColorLight="@color/blue_light"
                 app:neumorph_shadowElevation="6dp"
                 app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
                 app:neumorph_shapeType="basin"
                 app:neumorph_strokeColor="@color/dark_white"
-                app:neumorph_strokeWidth="1dp">
+                app:neumorph_strokeWidth="0dp">
 
                 <TextView
                     android:id="@+id/card4"
@@ -217,14 +217,14 @@
                 app:neumorph_insetEnd="12dp"
                 app:neumorph_insetStart="12dp"
                 app:neumorph_insetTop="12dp"
-                app:neumorph_lightSource="rightTop"
+                app:neumorph_lightSource="leftTop"
                 app:neumorph_shadowColorDark="@color/blue_dark"
                 app:neumorph_shadowColorLight="@color/blue_light"
                 app:neumorph_shadowElevation="6dp"
                 app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
                 app:neumorph_shapeType="basin"
                 app:neumorph_strokeColor="@color/dark_white"
-                app:neumorph_strokeWidth="1dp">
+                app:neumorph_strokeWidth="0dp">
 
                 <TextView
                     android:id="@+id/card5"
@@ -256,14 +256,14 @@
                 app:neumorph_insetEnd="12dp"
                 app:neumorph_insetStart="12dp"
                 app:neumorph_insetTop="12dp"
-                app:neumorph_lightSource="rightTop"
+                app:neumorph_lightSource="leftTop"
                 app:neumorph_shadowColorDark="@color/blue_dark"
                 app:neumorph_shadowColorLight="@color/blue_light"
                 app:neumorph_shadowElevation="6dp"
                 app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
                 app:neumorph_shapeType="basin"
                 app:neumorph_strokeColor="@color/dark_white"
-                app:neumorph_strokeWidth="1dp">
+                app:neumorph_strokeWidth="0dp">
 
                 <TextView
                     android:id="@+id/card6"
@@ -295,14 +295,14 @@
                 app:neumorph_insetEnd="12dp"
                 app:neumorph_insetStart="12dp"
                 app:neumorph_insetTop="12dp"
-                app:neumorph_lightSource="rightTop"
+                app:neumorph_lightSource="leftTop"
                 app:neumorph_shadowColorDark="@color/blue_dark"
                 app:neumorph_shadowColorLight="@color/blue_light"
                 app:neumorph_shadowElevation="6dp"
                 app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
                 app:neumorph_shapeType="basin"
                 app:neumorph_strokeColor="@color/dark_white"
-                app:neumorph_strokeWidth="1dp">
+                app:neumorph_strokeWidth="0dp">
 
                 <TextView
                     android:id="@+id/card1"
@@ -334,14 +334,14 @@
                 app:neumorph_insetEnd="12dp"
                 app:neumorph_insetStart="12dp"
                 app:neumorph_insetTop="12dp"
-                app:neumorph_lightSource="rightTop"
+                app:neumorph_lightSource="leftTop"
                 app:neumorph_shadowColorDark="@color/blue_dark"
                 app:neumorph_shadowColorLight="@color/blue_light"
                 app:neumorph_shadowElevation="6dp"
                 app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
                 app:neumorph_shapeType="basin"
                 app:neumorph_strokeColor="@color/dark_white"
-                app:neumorph_strokeWidth="1dp">
+                app:neumorph_strokeWidth="0dp">
 
                 <TextView
                     android:id="@+id/card2"

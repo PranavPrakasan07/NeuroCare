@@ -44,14 +44,14 @@
         app:neumorph_insetEnd="12dp"
         app:neumorph_insetStart="12dp"
         app:neumorph_insetTop="12dp"
-        app:neumorph_lightSource="rightTop"
+        app:neumorph_lightSource="leftTop"
         app:neumorph_shadowColorDark="@color/dark_white"
         app:neumorph_shadowColorLight="@color/white"
         app:neumorph_shadowElevation="6dp"
         app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
         app:neumorph_shapeType="flat"
         app:neumorph_strokeColor="@color/dark_white"
-        app:neumorph_strokeWidth="1dp">
+        app:neumorph_strokeWidth="0dp">
 
         <TextView
             android:id="@+id/user_name"
@@ -89,14 +89,14 @@
         app:neumorph_insetEnd="12dp"
         app:neumorph_insetStart="12dp"
         app:neumorph_insetTop="12dp"
-        app:neumorph_lightSource="rightTop"
+        app:neumorph_lightSource="leftTop"
         app:neumorph_shadowColorDark="@color/dark_white"
         app:neumorph_shadowColorLight="@color/white"
         app:neumorph_shadowElevation="6dp"
         app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
-        app:neumorph_shapeType="basin"
+        app:neumorph_shapeType="pressed"
         app:neumorph_strokeColor="@color/dark_white"
-        app:neumorph_strokeWidth="1dp">
+        app:neumorph_strokeWidth="0dp">
 
         <TextView
             android:id="@+id/email"
@@ -136,14 +136,14 @@
             app:neumorph_insetEnd="12dp"
             app:neumorph_insetStart="12dp"
             app:neumorph_insetTop="12dp"
-            app:neumorph_lightSource="rightTop"
+            app:neumorph_lightSource="leftTop"
             app:neumorph_shadowColorDark="@color/dark_white"
             app:neumorph_shadowColorLight="@color/white"
             app:neumorph_shadowElevation="6dp"
             app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
-            app:neumorph_shapeType="basin"
+            app:neumorph_shapeType="pressed"
             app:neumorph_strokeColor="@color/dark_white"
-            app:neumorph_strokeWidth="1dp">
+            app:neumorph_strokeWidth="0dp">
 
             <ImageButton
                 android:id="@+id/instagram"
@@ -171,14 +171,14 @@
             app:neumorph_insetEnd="12dp"
             app:neumorph_insetStart="12dp"
             app:neumorph_insetTop="12dp"
-            app:neumorph_lightSource="rightTop"
+            app:neumorph_lightSource="leftTop"
             app:neumorph_shadowColorDark="@color/dark_white"
             app:neumorph_shadowColorLight="@color/white"
             app:neumorph_shadowElevation="6dp"
             app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
-            app:neumorph_shapeType="basin"
+            app:neumorph_shapeType="pressed"
             app:neumorph_strokeColor="@color/dark_white"
-            app:neumorph_strokeWidth="1dp">
+            app:neumorph_strokeWidth="0dp">
 
             <ImageButton
                 android:id="@+id/facebook"
@@ -206,14 +206,14 @@
             app:neumorph_insetEnd="12dp"
             app:neumorph_insetStart="12dp"
             app:neumorph_insetTop="12dp"
-            app:neumorph_lightSource="rightTop"
+            app:neumorph_lightSource="leftTop"
             app:neumorph_shadowColorDark="@color/dark_white"
             app:neumorph_shadowColorLight="@color/white"
             app:neumorph_shadowElevation="6dp"
             app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
-            app:neumorph_shapeType="basin"
+            app:neumorph_shapeType="pressed"
             app:neumorph_strokeColor="@color/dark_white"
-            app:neumorph_strokeWidth="1dp">
+            app:neumorph_strokeWidth="0dp">
 
             <ImageButton
                 android:id="@+id/email_icon"

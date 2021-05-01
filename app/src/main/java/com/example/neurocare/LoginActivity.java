@@ -24,15 +24,19 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
 import club.cred.synth.views.SynthButton;
+import soup.neumorphism.NeumorphCardView;
+import soup.neumorphism.ShapeType;
 
 public class LoginActivity extends AppCompatActivity {
     EditText email, password;
     TextView signup_link;
 
+    NeumorphCardView n_signin, n_login;
+
     TextView login_button;
     private static final int RC_SIGN_IN = 1;
 
-    SynthButton login_tab, signin_tab;
+    TextView login_tab, signin_tab;
 
     RelativeLayout login_layout, signin_layout;
 
@@ -85,6 +89,9 @@ public class LoginActivity extends AppCompatActivity {
 
 //        signup_link = findViewById(R.id.signup_link);
 
+        n_login = findViewById(R.id.n_login_card);
+        n_signin = findViewById(R.id.n_signin_card);
+
         login_button = findViewById(R.id.login_button);
         auth = FirebaseAuth.getInstance();
 
@@ -107,6 +114,10 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 login_layout.setVisibility(View.GONE);
                 signin_layout.setVisibility(View.VISIBLE);
+
+                n_signin.setShapeType(ShapeType.PRESSED);
+                n_login.setShapeType(ShapeType.FLAT);
+
             }
         });
 
@@ -115,6 +126,10 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 signin_layout.setVisibility(View.GONE);
                 login_layout.setVisibility(View.VISIBLE);
+
+                n_login.setShapeType(ShapeType.PRESSED);
+                n_signin.setShapeType(ShapeType.FLAT);
+
             }
         });
 

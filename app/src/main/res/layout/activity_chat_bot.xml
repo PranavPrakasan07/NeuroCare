@@ -71,14 +71,14 @@
             app:neumorph_insetEnd="12dp"
             app:neumorph_insetStart="12dp"
             app:neumorph_insetTop="12dp"
-            app:neumorph_lightSource="rightTop"
+            app:neumorph_lightSource="leftTop"
             app:neumorph_shadowColorDark="@color/dark_white"
             app:neumorph_shadowColorLight="@color/white"
             app:neumorph_shadowElevation="6dp"
             app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
-            app:neumorph_shapeType="flat"
+            app:neumorph_shapeType="pressed"
             app:neumorph_strokeColor="@color/dark_white"
-            app:neumorph_strokeWidth="1dp">
+            app:neumorph_strokeWidth="0dp">
 
             <EditText
                 android:id="@+id/chatbox"
@@ -107,21 +107,21 @@
             app:neumorph_insetEnd="12dp"
             app:neumorph_insetStart="12dp"
             app:neumorph_insetTop="12dp"
-            app:neumorph_lightSource="rightTop"
+            app:neumorph_lightSource="leftTop"
             app:neumorph_shadowColorDark="@color/dark_white"
             app:neumorph_shadowColorLight="@color/white"
             app:neumorph_shadowElevation="6dp"
             app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
-            app:neumorph_shapeType="flat"
+            app:neumorph_shapeType="pressed"
             app:neumorph_strokeColor="@color/dark_white"
-            app:neumorph_strokeWidth="1dp">
+            app:neumorph_strokeWidth="0dp">
 
             <ImageButton
                 android:id="@+id/mic_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/background_color"
-                android:padding="12dp"
+                android:background="#00FFFFFF"
+                android:padding="14dp"
                 android:scaleType="fitCenter"
                 android:src="@drawable/ic_mic_off" />
 
@@ -142,15 +142,44 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+
+            <soup.neumorphism.NeumorphCardView
+                android:id="@+id/message_layout"
+                style="@style/Widget.Neumorph.CardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:neumorph_backgroundColor="@color/background_color"
+                app:neumorph_inset="12dp"
+                app:neumorph_insetBottom="12dp"
+                app:neumorph_insetEnd="12dp"
+                app:neumorph_insetStart="12dp"
+                app:neumorph_insetTop="12dp"
+                app:neumorph_lightSource="leftTop"
+                app:neumorph_shadowColorDark="@color/dark_white"
+                app:neumorph_shadowColorLight="@color/white"
+                app:neumorph_shadowElevation="6dp"
+                app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+                app:neumorph_shapeType="flat"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                app:neumorph_strokeColor="@color/dark_white"
+                app:neumorph_strokeWidth="0dp">
             <TextView
                 android:id="@+id/message_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
                 android:textSize="16sp"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
                 android:textColor="@color/text_color"
-                android:layout_alignParentEnd="true"
                 android:text=". . ." />
+            </soup.neumorphism.NeumorphCardView>
 
         </RelativeLayout>
 
