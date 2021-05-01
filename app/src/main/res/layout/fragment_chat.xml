@@ -141,9 +141,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
-                    android:padding="8dp"
-                    android:background="@color/transparent"
                     android:layout_alignParentEnd="true"
+                    android:background="@color/transparent"
+                    android:padding="8dp"
                     android:src="@drawable/ic_arrow_down" />
 
                 <TextView
@@ -177,14 +177,44 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/fixed_layout">
 
-                <TextView
-                    android:layout_width="wrap_content"
+
+                <soup.neumorphism.NeumorphCardView
+                    style="@style/Widget.Neumorph.CardView"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="8dp"
-                    android:text="Details"
-                    android:textColor="#000000"
-                    android:textSize="16sp" />
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginBottom="16dp"
+                    android:paddingStart="24dp"
+                    android:paddingTop="12dp"
+                    android:paddingEnd="24sp"
+                    android:paddingBottom="12dp"
+                    app:neumorph_backgroundColor="@color/background_color"
+                    app:neumorph_inset="12dp"
+                    app:neumorph_insetBottom="12dp"
+                    app:neumorph_insetEnd="12dp"
+                    app:neumorph_insetStart="12dp"
+                    app:neumorph_insetTop="12dp"
+                    app:neumorph_lightSource="leftTop"
+                    app:neumorph_shadowColorDark="@color/dark_white"
+                    app:neumorph_shadowColorLight="@color/white"
+                    app:neumorph_shadowElevation="6dp"
+                    app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+                    app:neumorph_shapeType="pressed"
+                    app:neumorph_strokeColor="@color/dark_white"
+                    app:neumorph_strokeWidth="0dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Details"
+                        android:textColor="#000000"
+                        android:textSize="16sp" />
+
+                </soup.neumorphism.NeumorphCardView>
 
             </LinearLayout>
 
@@ -193,12 +223,12 @@
     </soup.neumorphism.NeumorphCardView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
+        android:id="@+id/message_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:clickable="true"
         android:src="@drawable/ic_message_icon"

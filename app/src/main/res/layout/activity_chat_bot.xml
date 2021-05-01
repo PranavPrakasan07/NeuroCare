@@ -21,6 +21,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="32dp"
+            android:visibility="visible"
             app:lottie_autoPlay="true"
             app:lottie_fileName="chatbot-anim.json"
             app:lottie_loop="true"
@@ -43,6 +44,7 @@
             android:layout_marginStart="24dp"
             android:layout_marginBottom="16dp"
             android:text="Let's take a ride!"
+            android:visibility="visible"
             android:textColor="@color/background_color"
             android:textSize="16sp" />
 
@@ -84,10 +86,10 @@
                 android:id="@+id/chatbox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="4dp"
                 android:hint="Send a message!"
                 android:paddingStart="24sp"
-                android:layout_marginTop="4dp"
-                android:layout_gravity="center_vertical"
                 android:paddingEnd="24dp"
                 android:textColor="@color/text_color"
                 android:textColorHint="@color/hint_text_color" />

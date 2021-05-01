@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical"
+    tools:context=".MessagingActivity">
+
+    <RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/shadow">
+
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/transparent"
+            android:padding="8dp"
+            android:src="@drawable/ic_arrow_back" />
+
+        <TextView
+            android:id="@+id/top_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="24dp"
+
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Message"
+            android:textColor="@color/background_color"
+            android:textSize="28sp" />
+
+    </RelativeLayout>
+
+
+    <soup.neumorphism.NeumorphCardView
+        style="@style/Widget.Neumorph.CardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:padding="12dp"
+        app:neumorph_backgroundColor="@color/background_color"
+        app:neumorph_inset="12dp"
+        app:neumorph_insetBottom="12dp"
+        app:neumorph_insetEnd="12dp"
+        app:neumorph_insetStart="12dp"
+        app:neumorph_insetTop="12dp"
+        app:neumorph_lightSource="leftTop"
+        app:neumorph_shadowColorDark="@color/dark_white"
+        app:neumorph_shadowColorLight="@color/white"
+        app:neumorph_shadowElevation="6dp"
+        app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+        app:neumorph_shapeType="pressed"
+        app:neumorph_strokeColor="@color/dark_white"
+        app:neumorph_strokeWidth="0dp">
+
+        <RelativeLayout
+            android:id="@+id/chat1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/top_layout"
+            android:layout_margin="8dp"
+            android:background="@color/background_color">
+
+            <!--    Image-->
+            <RelativeLayout
+                android:id="@+id/image_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true">
+
+                <soup.neumorphism.NeumorphCardView
+                    android:id="@+id/photo_card"
+                    style="@style/Widget.Neumorph.CardView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:padding="12dp"
+                    app:neumorph_backgroundColor="@color/background_color"
+                    app:neumorph_inset="12dp"
+                    app:neumorph_insetBottom="12dp"
+                    app:neumorph_insetEnd="12dp"
+                    app:neumorph_insetStart="12dp"
+                    app:neumorph_insetTop="12dp"
+                    app:neumorph_lightSource="leftTop"
+                    app:neumorph_shadowColorDark="@color/dark_white"
+                    app:neumorph_shadowColorLight="@color/white"
+                    app:neumorph_shadowElevation="6dp"
+                    app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+                    app:neumorph_shapeType="pressed"
+                    app:neumorph_strokeColor="@color/dark_white"
+                    app:neumorph_strokeWidth="0dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="16dp"
+                        android:src="@drawable/ic_logo" />
+
+                </soup.neumorphism.NeumorphCardView>
+
+            </RelativeLayout>
+
+            <!--    Details-->
+            <RelativeLayout
+                android:id="@+id/details_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@id/number_of_messages"
+                android:layout_toEndOf="@id/image_layout">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="16dp"
+                    android:text="D 1"
+                    android:textColor="@color/text_color"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/name"
+                    android:layout_alignParentStart="true"
+                    android:text="Message"
+                    android:textColor="@color/text_color"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/number_of_messages"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/blue_card"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="@color/blue_white_text"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/timestamp"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_below="@id/number_of_messages"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:layout_toEndOf="@id/details_layout"
+                android:gravity="start"
+                android:text="Time"
+                android:textAlignment="gravity"
+                android:textColor="@color/blue_bg"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+    </soup.neumorphism.NeumorphCardView>
+
+    <soup.neumorphism.NeumorphCardView
+        style="@style/Widget.Neumorph.CardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:padding="12dp"
+        app:neumorph_backgroundColor="@color/background_color"
+        app:neumorph_inset="12dp"
+        app:neumorph_insetBottom="12dp"
+        app:neumorph_insetEnd="12dp"
+        app:neumorph_insetStart="12dp"
+        app:neumorph_insetTop="12dp"
+        app:neumorph_lightSource="leftTop"
+        app:neumorph_shadowColorDark="@color/dark_white"
+        app:neumorph_shadowColorLight="@color/white"
+        app:neumorph_shadowElevation="6dp"
+        app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+        app:neumorph_shapeType="pressed"
+        app:neumorph_strokeColor="@color/dark_white"
+        app:neumorph_strokeWidth="0dp">
+
+        <RelativeLayout
+            android:id="@+id/chat2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@color/background_color">
+
+            <!--    Image-->
+            <RelativeLayout
+                android:id="@+id/image_layout1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true">
+
+                <soup.neumorphism.NeumorphCardView
+                    android:id="@+id/photo_card1"
+                    style="@style/Widget.Neumorph.CardView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:padding="12dp"
+                    app:neumorph_backgroundColor="@color/background_color"
+                    app:neumorph_inset="12dp"
+                    app:neumorph_insetBottom="12dp"
+                    app:neumorph_insetEnd="12dp"
+                    app:neumorph_insetStart="12dp"
+                    app:neumorph_insetTop="12dp"
+                    app:neumorph_lightSource="leftTop"
+                    app:neumorph_shadowColorDark="@color/dark_white"
+                    app:neumorph_shadowColorLight="@color/white"
+                    app:neumorph_shadowElevation="6dp"
+                    app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+                    app:neumorph_shapeType="pressed"
+                    app:neumorph_strokeColor="@color/dark_white"
+                    app:neumorph_strokeWidth="0dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="16dp"
+                        android:src="@drawable/ic_logo" />
+
+                </soup.neumorphism.NeumorphCardView>
+
+            </RelativeLayout>
+
+            <!--    Details-->
+            <RelativeLayout
+                android:id="@+id/details_layout1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@id/number_of_messages1"
+                android:layout_toEndOf="@id/image_layout1">
+
+                <TextView
+                    android:id="@+id/name1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="16dp"
+                    android:text="D 2"
+                    android:textColor="@color/text_color"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/message1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/name1"
+                    android:layout_alignParentStart="true"
+                    android:text="Message"
+                    android:textColor="@color/text_color"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/number_of_messages1"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/blue_card"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="@color/blue_white_text"
+                android:textSize="18sp" />
+
+
+            <TextView
+                android:id="@+id/timestamp1"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_below="@id/number_of_messages1"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:layout_toEndOf="@id/details_layout1"
+                android:gravity="right"
+                android:text="Time"
+                android:textAlignment="gravity"
+                android:textColor="@color/blue_bg"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+    </soup.neumorphism.NeumorphCardView>
+
+
+</LinearLayout>

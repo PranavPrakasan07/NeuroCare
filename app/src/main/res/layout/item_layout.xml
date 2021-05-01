@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background_color">
+
+    <!--    Image-->
+    <RelativeLayout
+        android:id="@+id/image_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true">
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/photo_card"
+            style="@style/Widget.Neumorph.CardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:padding="12dp"
+            app:neumorph_backgroundColor="@color/background_color"
+            app:neumorph_inset="12dp"
+            app:neumorph_insetBottom="12dp"
+            app:neumorph_insetEnd="12dp"
+            app:neumorph_insetStart="12dp"
+            app:neumorph_insetTop="12dp"
+            app:neumorph_lightSource="leftTop"
+            app:neumorph_shadowColorDark="@color/dark_white"
+            app:neumorph_shadowColorLight="@color/white"
+            app:neumorph_shadowElevation="6dp"
+            app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+            app:neumorph_shapeType="pressed"
+            app:neumorph_strokeColor="@color/dark_white"
+            app:neumorph_strokeWidth="0dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="16dp"
+                android:src="@drawable/ic_logo" />
+
+        </soup.neumorphism.NeumorphCardView>
+
+    </RelativeLayout>
+
+    <!--    Details-->
+    <RelativeLayout
+        android:id="@+id/details_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/number_of_messages"
+        android:layout_toEndOf="@id/image_layout">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:text="Name"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/name"
+            android:text="Name"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/number_of_messages"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/blue_card"
+        android:text="0"
+        android:layout_marginTop="16dp"
+        android:textAlignment="center"
+        android:textColor="@color/blue_white_text"
+        android:textSize="18sp" />
+
+
+    <TextView
+        android:id="@+id/timestamp"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="32dp"
+        android:gravity="center"
+        android:layout_toEndOf="@id/details_layout"
+        android:text="0"
+        android:layout_below="@id/number_of_messages"
+        android:textAlignment="center"
+        android:textColor="@color/blue_bg"
+        android:textSize="18sp" />
+
+</RelativeLayout>

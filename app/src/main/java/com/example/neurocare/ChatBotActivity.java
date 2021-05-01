@@ -21,6 +21,8 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.airbnb.lottie.LottieAnimationView;
+
 import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Objects;
@@ -45,14 +47,28 @@ public class ChatBotActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat_bot);
 
+        LottieAnimationView animationView = findViewById(R.id.animationView);
+        TextView sub_header = findViewById(R.id.top_header1);
+
         user_welcome = findViewById(R.id.top_header);
         message_text = findViewById(R.id.message_text);
 
         mic_button = findViewById(R.id.mic_button);
         chatbox = findViewById(R.id.chatbox);
 
+
         try {
             user_welcome.setText("Hi " + Objects.requireNonNull(LoginActivity.auth.getCurrentUser()).getDisplayName() + "!");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        try {
+            if (getIntent().getStringExtra("code").equals("1")) {
+                user_welcome.setText(getIntent().getStringExtra("name"));
+                animationView.setVisibility(View.INVISIBLE);
+                sub_header.setVisibility(View.INVISIBLE);
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }

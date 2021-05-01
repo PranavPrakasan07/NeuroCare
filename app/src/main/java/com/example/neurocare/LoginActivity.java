@@ -76,8 +76,8 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        email = findViewById(R.id.email);
-        password = findViewById(R.id.password);
+//        email = findViewById(R.id.email);
+//        password = findViewById(R.id.password);
 
         login_tab = findViewById(R.id.login_tab);
         signin_tab = findViewById(R.id.signup_tab);
@@ -137,8 +137,8 @@ public class LoginActivity extends AppCompatActivity {
             String email_text = intent.getStringExtra("email");
             String password_text = intent.getStringExtra("password");
 
-            email.setText(email_text);
-            password.setText(password_text);
+//            email.setText(email_text);
+//            password.setText(password_text);
 
         } catch (Exception e) {
             e.printStackTrace();

@@ -3,11 +3,14 @@ package com.example.neurocare;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import android.transition.AutoTransition;
 import android.transition.TransitionManager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,11 +18,21 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 
+import java.util.EventListener;
 import java.util.Objects;
 
 import soup.neumorphism.NeumorphCardView;
+import soup.neumorphism.NeumorphFloatingActionButton;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -81,6 +94,15 @@ public class ChatFragment extends Fragment {
         NeumorphCardView cardView = view.findViewById(R.id.base_cardview);
         ImageButton arrow = view.findViewById(R.id.arrow_button);
 
+        FloatingActionButton message_button = view.findViewById(R.id.message_button);
+
+        message_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), MessagingActivity.class));
+            }
+        });
+
         arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -114,8 +136,6 @@ public class ChatFragment extends Fragment {
 
         if (currentUser != null) {
             user_welcome.setText("Hi " + Objects.requireNonNull(LoginActivity.auth.getCurrentUser()).getDisplayName() + "!");
-        } else {
-            ;
         }
 
         header.setOnClickListener(new View.OnClickListener() {
