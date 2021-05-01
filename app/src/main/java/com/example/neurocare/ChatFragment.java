@@ -3,14 +3,21 @@ package com.example.neurocare;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
+import android.transition.AutoTransition;
+import android.transition.TransitionManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.Objects;
+
+import soup.neumorphism.NeumorphCardView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -68,6 +75,38 @@ public class ChatFragment extends Fragment {
         TextView user_welcome = view.findViewById(R.id.top_header);
         TextView header = view.findViewById(R.id.chatbot_header);
 
+        LinearLayout hiddenView = view.findViewById(R.id.hidden_view);
+        NeumorphCardView cardView = view.findViewById(R.id.base_cardview);
+        ImageButton arrow = view.findViewById(R.id.arrow_button);
+
+        arrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                // If the CardView is already expanded, set its visibility
+                //  to gone and change the expand less icon to expand more.
+                if (hiddenView.getVisibility() == View.VISIBLE) {
+
+                    // The transition of the hiddenView is carried out
+                    //  by the TransitionManager class.
+                    // Here we use an object of the AutoTransition
+                    // Class to create a default transition.
+                    TransitionManager.beginDelayedTransition(cardView,
+                            new AutoTransition());
+                    hiddenView.setVisibility(View.GONE);
+                    arrow.setImageResource(R.drawable.ic_arrow_down);
+                }
+
+                // If the CardView is not expanded, set its visibility
+                // to visible and change the expand more icon to expand less.
+                else {
+                    TransitionManager.beginDelayedTransition(cardView,
+                            new AutoTransition());
+                    hiddenView.setVisibility(View.VISIBLE);
+                    arrow.setImageResource(R.drawable.ic_arrow_up);
+                }
+            }
+        });
         try {
             user_welcome.setText("Hi " + Objects.requireNonNull(LoginActivity.auth.getCurrentUser()).getDisplayName() + "!");
         } catch (Exception e) {
