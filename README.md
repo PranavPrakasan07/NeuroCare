@@ -1,6 +1,9 @@
 # NeuroCare
 A free e-psychology platform which will allow a person to book anonymous appointments with certified counsellors who shall help them out with their woes.
 
+![Mockup](https://raw.githubusercontent.com/PranavPrakasan07/NeuroCare/master/Mockup%20NeuroCare.png)
+
+
 # Description
 - The current global pandemic has not only affected people's physical health but also their mental health.
 
